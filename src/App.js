@@ -1,24 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
+/** @jsx jsx */
+import React, { useMemo } from 'react';
 import './App.css';
+import JSX from './components/languages/jsx';
+import { css, jsx } from '@emotion/core';
+// Utils
+import mapTheme from './themes/mapTheme';
 
 function App() {
+  const currentTheme = useMemo(mapTheme, []);
+  console.log(currentTheme)
+  const themeStyles = useMemo(() => {
+    const styles = `${currentTheme.tokens
+      .map(token => {
+        return `${token.scopes.map(scope => '.' + scope).join(', ')} { ${Object.entries(token.style)
+          .map(([key, value]) => `${key}: ${value};`)
+          .join('')}} `;
+      })
+      .join('')}`;
+
+    return `
+      background-color: ${currentTheme.style.background};
+      color: ${currentTheme.style.foreground};
+      padding: 1em 2em;
+
+      ${styles}
+    `;
+  }, [currentTheme]);
+  console.log(themeStyles);
+  const finalStyles = css(themeStyles);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App" css={finalStyles}>
+      <JSX />
     </div>
   );
 }
