@@ -1,3 +1,5 @@
+import { pureKeyRemove } from './utils/pureFunctions';
+
 export const INITIAL_STATE = {
   language: 'jsx',
   theme: {
@@ -39,7 +41,7 @@ export function reducer(state, action) {
           ...state.theme,
           name: action.theme.name + ' Copy',
           styles: action.theme.colors,
-          tokens: theme.tokenColors.map(tk => ({
+          tokens: state.theme.tokenColors.map(tk => ({
             name: tk.name,
             styles: tk.settings,
             scopes: tk.scope
@@ -70,9 +72,7 @@ export function reducer(state, action) {
         ...state,
         theme: {
           ...state.theme,
-          styles: {
-            ...stat
-          }
+          styles: pureKeyRemove(state.theme.styles, action.style)
         }
       }
     default:
