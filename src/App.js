@@ -1,39 +1,28 @@
-/** @jsx jsx */
-import React, { useMemo } from 'react';
-import './App.css';
-import JSX from './components/languages/jsx';
-import { css, jsx } from '@emotion/core';
+import React, { useReducer, useMemo } from 'react';
+// Components
+import Preview from './components/Preview';
 // Utils
-import mapTheme from './themes/mapTheme';
+import { getTheme } from './themes/utils';
+import { INITIAL_STATE, types, reducer } from './stateManagement';
 
+// TODO: fix double quoted string
+// TODO: fix semi-colons (probably a laserWave issue)
 function App() {
-  const currentTheme = useMemo(mapTheme, []);
-  console.log(currentTheme)
-  const themeStyles = useMemo(() => {
-    const styles = `${currentTheme.tokens
-      .map(token => {
-        return `${token.scopes.map(scope => '.' + scope).join(', ')} { ${Object.entries(token.style)
-          .map(([key, value]) => `${key}: ${value};`)
-          .join('')}} `;
-      })
-      .join('')}`;
+  const [state, dispatch] = useReducer(reducer, INITIAL_STATE)
+  const [scopes, setScopes] = useState([]);
+  const [buckets, setBuckets] = useState([]);
+  const [language, setLanguage] = useState('jsx');
+  const themeName = 'laserWave';
+  const theme = useMemo(() => getTheme(themeName), [themeName]);
 
-    return `
-      background-color: ${currentTheme.style.background};
-      color: ${currentTheme.style.foreground};
-      padding: 1em 2em;
+  // Sets up the buckets to use a prexisting theme
+  function useTheme() {
 
-      ${styles}
-    `;
-  }, [currentTheme]);
-  console.log(themeStyles);
-  const finalStyles = css(themeStyles);
+  }
 
-  return (
-    <div className="App" css={finalStyles}>
-      <JSX />
-    </div>
-  );
+  function placeScope(index, bucket)
+
+  return <Preview language={language} theme={theme} />;
 }
 
 export default App;

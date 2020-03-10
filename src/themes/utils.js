@@ -1,16 +1,17 @@
-import { SOURCE_MAP } from '../sources/sourceMap'
+import { SOURCE_MAP } from '../sources/sourceMap';
 // Theme
-import theme from './laserWave.json';
+import laserWave from './laserWave.json';
 
 const SETTINGS_MAP = {
-  foreground: 'color'
+  foreground: 'color',
+};
+
+// TODO: dynamically import themes
+export function getTheme(theme) {
+  return laserWave;
 }
 
-export default function mapTheme(
-  // theme
-) {
-  // TODO: dynamically import themes
-
+export function mapTheme(theme) {
   return {
     name: theme.name,
     style: {
@@ -19,10 +20,13 @@ export default function mapTheme(
     },
     tokens: theme.tokenColors.map(token => ({
       name: token.name,
-      style: Object.entries(token.settings).reduce((acc, [set, value]) => ({ ...acc, [SETTINGS_MAP[set]]: value }), {}),
-      scopes: token.scope.map(toSafe)
-    }))
-  }
+      style: Object.entries(token.settings).reduce(
+        (acc, [set, value]) => ({ ...acc, [SETTINGS_MAP[set]]: value }),
+        {}
+      ),
+      scopes: token.scope.map(toSafe),
+    })),
+  };
 }
 
 // Utils
@@ -33,4 +37,3 @@ function toSafe(scope) {
 function toNormal(scope) {
   return scope.replace(/_/g, '.');
 }
-

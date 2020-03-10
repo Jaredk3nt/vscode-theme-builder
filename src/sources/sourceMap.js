@@ -1,5 +1,5 @@
 const SOURCE_MAP = {
-  space: 'SPACE',
+  SPACE: 'space',
   // Editor
   EDT_FG: 'editor_foreground',
   EDT_BG: 'editor_background',
