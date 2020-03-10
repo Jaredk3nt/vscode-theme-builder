@@ -12,7 +12,7 @@ function Preview({ language = 'jsx', theme }) {
     const styles = `${currentTheme.tokens
       .map(token => {
         // Generate CSS scopes for all theme scopes
-        return `${token.scopes
+        return `${token.scopes && token.scopes
           .map(scope => '.' + scope)
           .join(', ')} { ${Object.entries(token.style)
           .map(([key, value]) => `${key}: ${value};`)
