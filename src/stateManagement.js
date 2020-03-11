@@ -1,3 +1,4 @@
+import { generate } from 'shortid';
 import { pureKeyRemove } from './utils/pureFunctions';
 
 export const INITIAL_STATE = {
@@ -41,10 +42,11 @@ export function reducer(state, action) {
           ...state.theme,
           name: action.theme.name + ' Copy',
           styles: action.theme.colors,
-          tokens: state.theme.tokenColors.map(tk => ({
+          tokens: action.theme.tokenColors.map(tk => ({
+            id: generate(),
             name: tk.name,
             styles: tk.settings,
-            scopes: tk.scope
+            scopes: Array.isArray(tk.scope) ? tk.scope : [tk.scope]
           }))
         }
       };

@@ -2,39 +2,54 @@
 import { useMemo } from 'react';
 import { css, jsx } from '@emotion/core';
 // Utils
-import { mapTheme } from '../themes/utils';
+import { mapSetting } from '../utils/themeUtils';
 // Constants
+import { SCOPES } from '../scopes';
 import { LANG_MAP } from './languages';
 
 function Preview({ language = 'jsx', theme }) {
-  const currentTheme = useMemo(() => mapTheme(theme), [theme]);
+  // Pick correct language example
+  const lang = LANG_MAP[language];
+  const LangComponent = lang.preview;
+  // Reverse tokens to map of scope: token-name for fast lookup
+  // TODO: move scope map up a level and to context since it is used by so many components
+  const scopeMap = useMemo(() => {
+    const map = {};
+    for (let token of theme.tokens) {
+      if (token.scopes) {
+        if (Array.isArray(token.scopes)) {
+          for (let scope of token.scopes) {
+            map[scope] = { id: token.id, name: token.name };
+          }
+        } else {
+          map[token.scopes] = { id: token.id, name: token.name };
+        }
+      }
+    }
+    return map;
+  }, [theme]);
+  // Generate classes for each token
   const themeStyles = useMemo(() => {
-    const styles = `${currentTheme.tokens
+    const styles = `${theme.tokens
       .map(token => {
-        // Generate CSS scopes for all theme scopes
-        return `${token.scopes && token.scopes
-          .map(scope => '.' + scope)
-          .join(', ')} { ${Object.entries(token.style)
-          .map(([key, value]) => `${key}: ${value};`)
-          .join('')}} `;
+        return `.${token.id} { ${Object.entries(token.styles)
+          .map(([key, value]) => `${mapSetting(key)}: ${value}; `)
+          .join(' ')}}`;
       })
-      .join('')}`;
+      .join(' ')}`;
 
     return `
-      background-color: ${currentTheme.style.background};
-      color: ${currentTheme.style.foreground};
+      background-color: ${theme.styles[SCOPES.EDT_BG]};
+      color: ${theme.styles[SCOPES.EDT_FG]};
       padding: 1em 2em;
 
       ${styles}
     `;
-  }, [currentTheme]);
-  // Pick correct language example
-  const lang = LANG_MAP[language];
-  const LangComponent = lang.preview;
+  }, [theme]);
 
   return (
     <div css={css(themeStyles)}>
-      <LangComponent />
+      <LangComponent scopeMap={scopeMap} />
     </div>
   );
 }

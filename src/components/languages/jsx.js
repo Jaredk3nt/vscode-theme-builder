@@ -1,754 +1,1749 @@
 import React from 'react';
-import { SOURCE_MAP } from '../../sources/sourceMap';
+import Scope from './Scope';
+import { SCOPES } from '../../scopes';
 
-export default function JSX({}) {
+export default function JSX({ scopeMap }) {
   return (
     <pre>
       <code className="jsx">
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.KEY_CTRL_MOD_JS}`}
+        <Scope
+          scopes={[SCOPES.SOURCE_JS, SCOPES.KEY_CTRL_MOD_JS]}
+          scopeMap={scopeMap}
         >
           import
-        </span>
-        <span className={`${SOURCE_MAP.SPACE}`}> </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.VAR_OTHER_RW_JS}`}
+        </Scope>
+        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
+          {' '}
+        </Scope>
+        <Scope
+          scopes={[SCOPES.SOURCE_JS, SCOPES.VAR_OTHER_RW_JS]}
+          scopeMap={scopeMap}
         >
           React
-        </span>
-        <span className={`${SOURCE_MAP.SPACE}`}> </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.KEY_CTRL_MOD_JS}`}
+        </Scope>
+        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
+          {' '}
+        </Scope>
+        <Scope
+          scopes={[SCOPES.SOURCE_JS, SCOPES.KEY_CTRL_MOD_JS]}
+          scopeMap={scopeMap}
         >
           from
-        </span>
-        <span className={`${SOURCE_MAP.SPACE}`}> </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.STR_QUO_MOD_JS} ${SOURCE_MAP.PUNC_DEF_STR_BEGIN_JS}`}
+        </Scope>
+        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
+          {' '}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.STR_QUO_MOD_JS,
+            SCOPES.PUNC_DEF_STR_BEGIN_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           '
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.STR_QUO_MOD_JS}`}
+        </Scope>
+        <Scope
+          scopes={[SCOPES.SOURCE_JS, SCOPES.STR_QUO_MOD_JS]}
+          scopeMap={scopeMap}
         >
           react
-        </span>
-        <span className={``}>'</span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.PUNC_TERM_STMT_JS}`}
-        >
-          ;
-        </span>
-        <br />
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.KEY_CTRL_MOD_JS}`}
-        >
-          import
-        </span>
-        <span className={`${SOURCE_MAP.SPACE}`}> </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.VAR_OTHER_RW_JS}`}
-        >
-          calculate
-        </span>
-        <span className={`${SOURCE_MAP.SPACE}`}> </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.KEY_CTRL_MOD_JS}`}
-        >
-          from
-        </span>
-        <span className={`${SOURCE_MAP.SPACE}`}> </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.STR_QUO_MOD_JS} ${SOURCE_MAP.PUNC_DEF_STR_BEGIN_JS}`}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.STR_QUO_MOD_JS,
+            SCOPES.PUNC_DEF_STR_BEGIN_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           '
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.STR_QUO_MOD_JS}`}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.PUNC_TERM_STMT_JS,
+          ]}
+          scopeMap={scopeMap}
+        >
+          ;
+        </Scope>
+        <br />
+        <Scope
+          scopes={[SCOPES.SOURCE_JS, SCOPES.KEY_CTRL_MOD_JS]}
+          scopeMap={scopeMap}
+        >
+          import
+        </Scope>
+        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
+          {' '}
+        </Scope>
+        <Scope
+          scopes={[SCOPES.SOURCE_JS, SCOPES.VAR_OTHER_RW_JS]}
+          scopeMap={scopeMap}
+        >
+          calculate
+        </Scope>
+        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
+          {' '}
+        </Scope>
+        <Scope
+          scopes={[SCOPES.SOURCE_JS, SCOPES.KEY_CTRL_MOD_JS]}
+          scopeMap={scopeMap}
+        >
+          from
+        </Scope>
+        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
+          {' '}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.STR_QUO_MOD_JS,
+            SCOPES.PUNC_DEF_STR_BEGIN_JS,
+          ]}
+          scopeMap={scopeMap}
+        >
+          '
+        </Scope>
+        <Scope
+          scopes={[SCOPES.SOURCE_JS, SCOPES.STR_QUO_MOD_JS]}
+          scopeMap={scopeMap}
         >
           ../logic/calculate
-        </span>
-        <span className={``}>'</span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.PUNC_TERM_STMT_JS}`}
-        >
-          ;
-        </span>
-        <br />
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.KEY_CTRL_MOD_JS}`}
-        >
-          import
-        </span>
-        <span className={`${SOURCE_MAP.SPACE}`}> </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.STR_QUO_MOD_JS} ${SOURCE_MAP.PUNC_DEF_STR_BEGIN_JS}`}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.STR_QUO_MOD_JS,
+            SCOPES.PUNC_DEF_STR_BEGIN_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           '
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.STR_QUO_MOD_JS}`}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.PUNC_TERM_STMT_JS,
+          ]}
+          scopeMap={scopeMap}
+        >
+          ;
+        </Scope>
+        <br />
+        <Scope
+          scopes={[SCOPES.SOURCE_JS, SCOPES.KEY_CTRL_MOD_JS]}
+          scopeMap={scopeMap}
+        >
+          import
+        </Scope>
+        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
+          {' '}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.STR_QUO_MOD_JS,
+            SCOPES.PUNC_DEF_STR_BEGIN_JS,
+          ]}
+          scopeMap={scopeMap}
+        >
+          '
+        </Scope>
+        <Scope
+          scopes={[SCOPES.SOURCE_JS, SCOPES.STR_QUO_MOD_JS]}
+          scopeMap={scopeMap}
         >
           ./App.css
-        </span>
-        <span className={``}>'</span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.PUNC_TERM_STMT_JS}`}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.STR_QUO_MOD_JS,
+            SCOPES.PUNC_DEF_STR_BEGIN_JS,
+          ]}
+          scopeMap={scopeMap}
+        >
+          '
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.PUNC_TERM_STMT_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           ;
-        </span>
+        </Scope>
         <br />
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.KEY_CTRL_MOD_JS}`}
+        <Scope
+          scopes={[SCOPES.SOURCE_JS, SCOPES.KEY_CTRL_MOD_JS]}
+          scopeMap={scopeMap}
         >
           import
-        </span>
-        <span className={`${SOURCE_MAP.SPACE}`}> </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.VAR_OTHER_RW_JS}`}
+        </Scope>
+        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
+          {' '}
+        </Scope>
+        <Scope
+          scopes={[SCOPES.SOURCE_JS, SCOPES.VAR_OTHER_RW_JS]}
+          scopeMap={scopeMap}
         >
           ButtonPanel
-        </span>
-        <span className={`${SOURCE_MAP.SPACE}`}> </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.KEY_CTRL_MOD_JS}`}
+        </Scope>
+        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
+          {' '}
+        </Scope>
+        <Scope
+          scopes={[SCOPES.SOURCE_JS, SCOPES.KEY_CTRL_MOD_JS]}
+          scopeMap={scopeMap}
         >
           from
-        </span>
-        <span className={`${SOURCE_MAP.SPACE}`}> </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.STR_QUO_MOD_JS} ${SOURCE_MAP.PUNC_DEF_STR_BEGIN_JS}`}
+        </Scope>
+        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
+          {' '}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.STR_QUO_MOD_JS,
+            SCOPES.PUNC_DEF_STR_BEGIN_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           '
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.STR_QUO_MOD_JS}`}
+        </Scope>
+        <Scope
+          scopes={[SCOPES.SOURCE_JS, SCOPES.STR_QUO_MOD_JS]}
+          scopeMap={scopeMap}
         >
           ./ButtonPanel
-        </span>
-        <span className={``}>'</span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.PUNC_TERM_STMT_JS}`}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.STR_QUO_MOD_JS,
+            SCOPES.PUNC_DEF_STR_BEGIN_JS,
+          ]}
+          scopeMap={scopeMap}
+        >
+          '
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.PUNC_TERM_STMT_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           ;
-        </span>
+        </Scope>
         <br />
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.KEY_CTRL_MOD_JS}`}
+        <Scope
+          scopes={[SCOPES.SOURCE_JS, SCOPES.KEY_CTRL_MOD_JS]}
+          scopeMap={scopeMap}
         >
           import
-        </span>
-        <span className={`${SOURCE_MAP.SPACE}`}> </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.VAR_OTHER_RW_JS}`}
+        </Scope>
+        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
+          {' '}
+        </Scope>
+        <Scope
+          scopes={[SCOPES.SOURCE_JS, SCOPES.VAR_OTHER_RW_JS]}
+          scopeMap={scopeMap}
         >
           Display
-        </span>
-        <span className={`${SOURCE_MAP.SPACE}`}> </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.KEY_CTRL_MOD_JS}`}
+        </Scope>
+        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
+          {' '}
+        </Scope>
+        <Scope
+          scopes={[SCOPES.SOURCE_JS, SCOPES.KEY_CTRL_MOD_JS]}
+          scopeMap={scopeMap}
         >
           from
-        </span>
-        <span className={`${SOURCE_MAP.SPACE}`}> </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.STR_QUO_MOD_JS} ${SOURCE_MAP.PUNC_DEF_STR_BEGIN_JS}`}
+        </Scope>
+        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
+          {' '}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.STR_QUO_MOD_JS,
+            SCOPES.PUNC_DEF_STR_BEGIN_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           '
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.STR_QUO_MOD_JS}`}
+        </Scope>
+        <Scope
+          scopes={[SCOPES.SOURCE_JS, SCOPES.STR_QUO_MOD_JS]}
+          scopeMap={scopeMap}
         >
           ./Display
-        </span>
-        <span className={``}>'</span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.PUNC_TERM_STMT_JS}`}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.STR_QUO_MOD_JS,
+            SCOPES.PUNC_DEF_STR_BEGIN_JS,
+          ]}
+          scopeMap={scopeMap}
+        >
+          '
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.PUNC_TERM_STMT_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           ;
-        </span>
+        </Scope>
         <br /> <br />
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_JS} ${SOURCE_MAP.STRG_TYPE_CLS_JS}`}
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_JS,
+            SCOPES.STRG_TYPE_CLS_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           class
-        </span>
-        <span className={`${SOURCE_MAP.SPACE}`}> </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.ENT_NAME_CLS_JS}`}
+        </Scope>
+        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
+          {' '}
+        </Scope>
+        <Scope
+          scopes={[SCOPES.SOURCE_JS, SCOPES.ENT_NAME_CLS_JS]}
+          scopeMap={scopeMap}
         >
           App
-        </span>
-        <span className={`${SOURCE_MAP.SPACE}`}> </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_EXTD_JS} ${SOURCE_MAP.STRG_TYPE_EXTD_JS}`}
+        </Scope>
+        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
+          {' '}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_EXTD_JS,
+            SCOPES.STRG_TYPE_EXTD_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           extends
-        </span>
-        <span className={`${SOURCE_MAP.SPACE}`}> </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.ENT_NAME_CLS_JS}`}
+        </Scope>
+        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
+          {' '}
+        </Scope>
+        <Scope
+          scopes={[SCOPES.SOURCE_JS, SCOPES.ENT_NAME_CLS_JS]}
+          scopeMap={scopeMap}
         >
           React
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.KEY_OP_ACCESS_JS}`}
+        </Scope>
+        <Scope
+          scopes={[SCOPES.SOURCE_JS, SCOPES.KEY_OP_ACCESS_JS]}
+          scopeMap={scopeMap}
         >
           .
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.ENT_NAME_CLS_JS}`}
+        </Scope>
+        <Scope
+          scopes={[SCOPES.SOURCE_JS, SCOPES.ENT_NAME_CLS_JS]}
+          scopeMap={scopeMap}
         >
           Component
-        </span>
-        <span className={`${SOURCE_MAP.SPACE}`}> </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.PUNC_SEC_CLS_BEGIN_JS}`}
+        </Scope>
+        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
+          {' '}
+        </Scope>
+        <Scope
+          scopes={[SCOPES.SOURCE_JS, SCOPES.PUNC_SEC_CLS_BEGIN_JS]}
+          scopeMap={scopeMap}
         >
           {'{'}
-        </span>
+        </Scope>
         <br />
-        <span className={`${SOURCE_MAP.SPACE}`}>{'  '}</span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.ENT_NAME_FUNC_METH_JS}`}
+        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
+          {'  '}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.ENT_NAME_FUNC_METH_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           constructor
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} puncutation.definition.parameters.begin.js ${SOURCE_MAP.META_BRACE_ROUND_JS}`}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.PUNC_DEF_PARAM_BEGIN_JS,
+            SCOPES.META_BRACE_ROUND_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           (
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.META_FUNC_PARAM_JS} ${SOURCE_MAP.VAR_OTHER_RW_JS}`}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.META_FUNC_PARAM_JS,
+            SCOPES.VAR_OTHER_RW_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           props
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.PUNC_DEF_PARAM_END_JS} ${SOURCE_MAP.META_BRACE_ROUND_JS}`}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.PUNC_DEF_PARAM_END_JS,
+            SCOPES.META_BRACE_ROUND_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           )
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.META_BRACE_CURLY_JS}`}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.META_BRACE_CURLY_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           {'{'}
-        </span>
+        </Scope>
         <br />
-        <span className={`${SOURCE_MAP.SPACE}`}>{'    '}</span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.META_FUNCCALL_WARG_JS} ${SOURCE_MAP.ENT_NAME_FUNC_JS}`}
+        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
+          {'    '}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.META_FUNCCALL_WARG_JS,
+            SCOPES.ENT_NAME_FUNC_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           super
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.META_FUNCCALL_WARG_JS} ${SOURCE_MAP.META_BRACE_ROUND_JS}`}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.META_FUNCCALL_WARG_JS,
+            SCOPES.META_BRACE_ROUND_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           (
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.META_FUNCCALL_WARG_JS} ${SOURCE_MAP.VAR_OTHER_RW_JS}`}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.META_FUNCCALL_WARG_JS,
+            SCOPES.VAR_OTHER_RW_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           props
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.META_FUNCCALL_WARG_JS} ${SOURCE_MAP.META_BRACE_ROUND_JS}`}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.META_FUNCCALL_WARG_JS,
+            SCOPES.META_BRACE_ROUND_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           )
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.PUNC_TERM_STMT_JS}`}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.PUNC_TERM_STMT_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           ;
-        </span>
+        </Scope>
         <br />
-        <span className={`${SOURCE_MAP.SPACE}`}>{'    '}</span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.VAR_LANG_THIS_JS}`}
+        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
+          {'    '}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.VAR_LANG_THIS_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           this
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.KEY_OP_ACCESS_JS}`}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.KEY_OP_ACCESS_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           .
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.META_PROP_OBJ_JS} ${SOURCE_MAP.VAR_OTHER_PROP_JS}`}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.META_PROP_OBJ_JS,
+            SCOPES.VAR_OTHER_PROP_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           state
-        </span>
-        <span className={`${SOURCE_MAP.SPACE}`}> </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.META_BRACE_CURLY_LITOBJ_JS}`}
+        </Scope>
+        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
+          {' '}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.META_BRACE_CURLY_LITOBJ_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           {'{'}
-        </span>
+        </Scope>
         <br />
-        <span className={`${SOURCE_MAP.SPACE}`}>{'      '}</span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.CONST_OTHER_OBJ_KEY_JS} ${SOURCE_MAP.STR_UNQUO_JS}`}
+        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
+          {'      '}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.CONST_OTHER_OBJ_KEY_JS,
+            SCOPES.STR_UNQUO_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           total
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.PUNC_SEP_KV_JS}`}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.PUNC_SEP_KV_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           :
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS}`}
-        ></span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.CONST_NUM_JS}`}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+          ]}
+          scopeMap={scopeMap}
+        ></Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.CONST_NUM_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           0
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS}${SOURCE_MAP.META_DEL_COMMA_JS}`}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.META_DEL_COMMA_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           ,
-        </span>
+        </Scope>
         <br />
-        <span className={`${SOURCE_MAP.SPACE}`}>{'      '}</span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.CONST_OTHER_OBJ_KEY_JS} ${SOURCE_MAP.STR_UNQUO_JS}`}
+        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
+          {'      '}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.CONST_OTHER_OBJ_KEY_JS,
+            SCOPES.STR_UNQUO_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           next
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.PUNC_SEP_KV_JS}`}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.PUNC_SEP_KV_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           :
-        </span>
-        <span className={`${SOURCE_MAP.SPACE}`}> </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.CONST_LANG_UNDEF_JS}`}
+        </Scope>
+        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
+          {' '}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.CONST_LANG_UNDEF_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           undefined
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS}${SOURCE_MAP.META_DEL_COMMA_JS}`}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.META_DEL_COMMA_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           ,
-        </span>
+        </Scope>
         <br />
-        <span className={`${SOURCE_MAP.SPACE}`}>{'      '}</span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.CONST_OTHER_OBJ_KEY_JS} ${SOURCE_MAP.STR_UNQUO_JS}`}
+        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
+          {'      '}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.CONST_OTHER_OBJ_KEY_JS,
+            SCOPES.STR_UNQUO_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           operation
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.PUNC_SEP_KV_JS}`}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.PUNC_SEP_KV_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           :
-        </span>
-        <span className={`${SOURCE_MAP.SPACE}`}> </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.CONST_LANG_UNDEF_JS}`}
+        </Scope>
+        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
+          {' '}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.CONST_LANG_UNDEF_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           null
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS}${SOURCE_MAP.META_DEL_COMMA_JS}`}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.META_DEL_COMMA_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           ,
-        </span>
+        </Scope>
         <br />
-        <span className={`${SOURCE_MAP.SPACE}`}>{'    '}</span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.META_BRACE_CURLY_LITOBJ_JS}`}
+        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
+          {'    '}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.META_BRACE_CURLY_LITOBJ_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           }
-        </span>
+        </Scope>
         <br />
-        <span className={`${SOURCE_MAP.SPACE}`}>{'  '}</span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.META_BRACE_CURLY_JS}`}
+        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
+          {'  '}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.META_BRACE_CURLY_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           }
-        </span>
+        </Scope>
         <br /> <br />
-        <span className={`${SOURCE_MAP.SPACE}`}>{'  '}</span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_ARROW_JS} ${SOURCE_MAP.ENT_NAME_FUNC_JS}`}
+        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
+          {'  '}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_ARROW_JS,
+            SCOPES.ENT_NAME_FUNC_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           handleClick
-        </span>
-        <span className={`${SOURCE_MAP.SPACE}`}> </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_ARROW_JS} ${SOURCE_MAP.KEY_OP_ASSIGN_JS}`}
+        </Scope>
+        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
+          {' '}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_ARROW_JS,
+            SCOPES.KEY_OP_ASSIGN_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           =
-        </span>
-        <span className={`${SOURCE_MAP.SPACE}`}> </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_ARROW_JS} ${SOURCE_MAP.META_FUNC_PARAM_JS} ${SOURCE_MAP.VAR_OTHER_RW_JS}`}
+        </Scope>
+        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
+          {' '}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_ARROW_JS,
+            SCOPES.META_FUNC_PARAM_JS,
+            SCOPES.VAR_OTHER_RW_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           buttonName
-        </span>
-        <span className={`${SOURCE_MAP.SPACE}`}> </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_ARROW_JS} ${SOURCE_MAP.STRG_TYPE_FUNC_ARROW_JS}`}
+        </Scope>
+        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
+          {' '}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_ARROW_JS,
+            SCOPES.STRG_TYPE_FUNC_ARROW_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           =>
-        </span>
-        <span className={`${SOURCE_MAP.SPACE}`}> </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_BRACE_CURLY_JS}`}
+        </Scope>
+        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
+          {' '}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_BRACE_CURLY_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           {'{'}
-        </span>
+        </Scope>
         <br />
-        <span className={`${SOURCE_MAP.SPACE}`}>{'    '}</span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.VAR_LANG_THIS_JS}`}
+        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
+          {'    '}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.VAR_LANG_THIS_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           this
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.KEY_OP_ACCESS_JS}`}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.KEY_OP_ACCESS_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           .
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_METHCALL_WARG_JS} ${SOURCE_MAP.ENT_NAME_FUNC_JS}`}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_METHCALL_WARG_JS,
+            SCOPES.ENT_NAME_FUNC_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           setState
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_METHCALL_WARG_JS} ${SOURCE_MAP.META_BRACE_ROUND_JS}`}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_METHCALL_WARG_JS,
+            SCOPES.META_BRACE_ROUND_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           (
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_METHCALL_WARG_JS} ${SOURCE_MAP.META_FUNCCALL_WARG_JS} ${SOURCE_MAP.ENT_NAME_FUNC_JS}`}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_METHCALL_WARG_JS,
+            SCOPES.META_FUNCCALL_WARG_JS,
+            SCOPES.ENT_NAME_FUNC_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           calculate
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_METHCALL_WARG_JS} ${SOURCE_MAP.META_FUNCCALL_WARG_JS} ${SOURCE_MAP.META_BRACE_ROUND_JS}`}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_METHCALL_WARG_JS,
+            SCOPES.META_FUNCCALL_WARG_JS,
+            SCOPES.META_BRACE_ROUND_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           (
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_METHCALL_WARG_JS} ${SOURCE_MAP.META_FUNCCALL_WARG_JS} ${SOURCE_MAP.VAR_LANG_THIS_JS}`}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_METHCALL_WARG_JS,
+            SCOPES.META_FUNCCALL_WARG_JS,
+            SCOPES.VAR_LANG_THIS_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           this
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_METHCALL_WARG_JS} ${SOURCE_MAP.META_FUNCCALL_WARG_JS} ${SOURCE_MAP.KEY_OP_ACCESS_JS}`}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_METHCALL_WARG_JS,
+            SCOPES.META_FUNCCALL_WARG_JS,
+            SCOPES.KEY_OP_ACCESS_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           .
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_METHCALL_WARG_JS} ${SOURCE_MAP.META_FUNCCALL_WARG_JS} ${SOURCE_MAP.META_PROP_OBJ_JS} ${SOURCE_MAP.VAR_OTHER_PROP_JS}`}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_METHCALL_WARG_JS,
+            SCOPES.META_FUNCCALL_WARG_JS,
+            SCOPES.META_PROP_OBJ_JS,
+            SCOPES.VAR_OTHER_PROP_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           state
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_METHCALL_WARG_JS} ${SOURCE_MAP.META_FUNCCALL_WARG_JS}${SOURCE_MAP.META_DEL_COMMA_JS}`}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_METHCALL_WARG_JS,
+            SCOPES.META_FUNCCALL_WARG_JS,
+            SCOPES.META_DEL_COMMA_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           ,
-        </span>
-        <span className={`${SOURCE_MAP.SPACE}`}> </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_METHCALL_WARG_JS} ${SOURCE_MAP.META_FUNCCALL_WARG_JS} ${SOURCE_MAP.VAR_OTHER_RW_JS}`}
+        </Scope>
+        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
+          {' '}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_METHCALL_WARG_JS,
+            SCOPES.META_FUNCCALL_WARG_JS,
+            SCOPES.VAR_OTHER_RW_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           buttonName
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_METHCALL_WARG_JS} ${SOURCE_MAP.META_FUNCCALL_WARG_JS} ${SOURCE_MAP.META_BRACE_ROUND_JS}`}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_METHCALL_WARG_JS,
+            SCOPES.META_FUNCCALL_WARG_JS,
+            SCOPES.META_BRACE_ROUND_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           )
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_METHCALL_WARG_JS} ${SOURCE_MAP.META_FUNCCALL_WARG_JS} ${SOURCE_MAP.META_BRACE_ROUND_JS}`}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_METHCALL_WARG_JS,
+            SCOPES.META_FUNCCALL_WARG_JS,
+            SCOPES.META_BRACE_ROUND_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           )
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.PUNC_TERM_STMT_JS}`}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.PUNC_TERM_STMT_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           ;
-        </span>
+        </Scope>
         <br />
-        <span className={`${SOURCE_MAP.SPACE}`}>{'  '}</span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_BRACE_CURLY_JS}`}
+        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
+          {'  '}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_BRACE_CURLY_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           }
-        </span>
+        </Scope>
         <br /> <br />
-        <span className={`${SOURCE_MAP.SPACE}`}>{'  '}</span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.ENT_NAME_FUNC_METH_JS}`}
+        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
+          {'  '}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.ENT_NAME_FUNC_METH_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           render
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.PUNC_DEF_PARAM_BEGIN_JS}} ${SOURCE_MAP.META_BRACE_ROUND_JS}`}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.PUNC_DEF_PARAM_BEGIN_JS,
+            SCOPES.META_BRACE_ROUND_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           (
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.PUNC_DEF_PARAM_END_JS}} ${SOURCE_MAP.META_BRACE_ROUND_JS}`}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.PUNC_DEF_PARAM_END_JS,
+            SCOPES.META_BRACE_ROUND_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           )
-        </span>
-        <span className={`${SOURCE_MAP.SPACE}`}> </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.META_BRACE_CURLY_JS}`}
+        </Scope>
+        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
+          {' '}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.META_BRACE_CURLY_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           {'{'}
-        </span>
+        </Scope>
         <br />
-        <span className={`${SOURCE_MAP.SPACE}`}>{'    '}</span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.KEY_CTRL_FLOW_JS}`}
+        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
+          {'    '}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.KEY_CTRL_FLOW_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           return
-        </span>
-        <span className={`${SOURCE_MAP.SPACE}`}> </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.META_BRACE_ROUND_JS}`}
+        </Scope>
+        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
+          {' '}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.META_BRACE_ROUND_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           (
-        </span>
+        </Scope>
         <br />
-        <span className={`${SOURCE_MAP.SPACE}`}>{'      '}</span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.META_TAG_JSX} ${SOURCE_MAP.PUNC_DEF_TAG_JSX}`}
+        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
+          {'      '}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.META_TAG_JSX,
+            SCOPES.PUNC_DEF_TAG_JSX,
+          ]}
+          scopeMap={scopeMap}
         >
           {'<'}
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.META_TAG_JSX} ${SOURCE_MAP.ENT_NAME_TAG_OPEN_JSX}`}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.META_TAG_JSX,
+            SCOPES.ENT_NAME_TAG_OPEN_JSX,
+          ]}
+          scopeMap={scopeMap}
         >
           div
-        </span>
-        <span className={`${SOURCE_MAP.SPACE}`}> </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.META_TAG_JSX} ${SOURCE_MAP.JSXATTR} ${SOURCE_MAP.ENT_OTHER_ATTRNAME_JSX}`}
+        </Scope>
+        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
+          {' '}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.META_TAG_JSX,
+            SCOPES.JSXATTR,
+            SCOPES.ENT_OTHER_ATTRNAME_JSX,
+          ]}
+          scopeMap={scopeMap}
         >
           className
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.META_TAG_JSX} ${SOURCE_MAP.JSXATTR} ${SOURCE_MAP.KEY_OP_ASSIGN_JS}x`}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.META_TAG_JSX,
+            SCOPES.JSXATTR,
+            SCOPES.KEY_OP_ASSIGN_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           =
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.META_TAG_JSX} ${SOURCE_MAP.JSXATTR} ${SOURCE_MAP.STR_QUO_DOUBLE_JS}} ${SOURCE_MAP.PUNC_DEF_STR_BEGIN_JS}`}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.META_TAG_JSX,
+            SCOPES.JSXATTR,
+            SCOPES.STR_QUO_DOUBLE_JS,
+            SCOPES.PUNC_DEF_STR_BEGIN_JS,
+          ]}
+          scopeMap={scopeMap}
         >
-          `
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.META_TAG_JSX} ${SOURCE_MAP.JSXATTR} ${SOURCE_MAP.STR_QUO_DOUBLE_JS}}`}
+          "
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.META_TAG_JSX,
+            SCOPES.JSXATTR,
+            SCOPES.STR_QUO_DOUBLE_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           component-app
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.META_TAG_JSX} ${SOURCE_MAP.JSXATTR} ${SOURCE_MAP.STR_QUO_DOUBLE_JS}} ${SOURCE_MAP.PUNC_DEF_STR_END_JS}x`}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.META_TAG_JSX,
+            SCOPES.JSXATTR,
+            SCOPES.STR_QUO_DOUBLE_JS,
+            SCOPES.PUNC_DEF_STR_END_JS,
+          ]}
+          scopeMap={scopeMap}
         >
-          `
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.META_TAG_JSX} ${SOURCE_MAP.JSXATTR} ${SOURCE_MAP.PUNC_DEF_TAG_JSX} ${SOURCE_MAP.JSXSTARTTAGEND}`}
+          "
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.META_TAG_JSX,
+            SCOPES.JSXATTR,
+            SCOPES.PUNC_DEF_TAG_JSX,
+            SCOPES.JSXSTARTTAGEND,
+          ]}
+          scopeMap={scopeMap}
         >
           {'>'}
-        </span>
+        </Scope>
         <br />
-        <span className={`${SOURCE_MAP.SPACE}`}>{'        '}</span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.META_TAG_JSX} ${SOURCE_MAP.JSXATTR} ${SOURCE_MAP.JSXNESTED}`}
+        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
+          {'        '}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.META_TAG_JSX,
+            SCOPES.JSXATTR,
+            SCOPES.JSXNESTED,
+          ]}
+          scopeMap={scopeMap}
         >
           Tacos
-        </span>
+        </Scope>
         <br />
-        <span className={`${SOURCE_MAP.SPACE}`}>{'        '}</span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.META_TAG_JSX} ${SOURCE_MAP.JSXATTR} ${SOURCE_MAP.JSXNESTED} ${SOURCE_MAP.META_TAG_JSX} ${SOURCE_MAP.PUNC_DEF_TAG_JSX}`}
+        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
+          {'        '}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.META_TAG_JSX,
+            SCOPES.JSXATTR,
+            SCOPES.JSXNESTED,
+            SCOPES.META_TAG_JSX,
+            SCOPES.PUNC_DEF_TAG_JSX,
+          ]}
+          scopeMap={scopeMap}
         >
           {'<'}
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.META_TAG_JSX} ${SOURCE_MAP.JSXATTR} ${SOURCE_MAP.JSXNESTED} ${SOURCE_MAP.META_TAG_JSX} ${SOURCE_MAP.ENT_NAME_TAG_OPEN_JSX} ${SOURCE_MAP.SUPP_CLS_COMP_OPEN_JSX}`}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.META_TAG_JSX,
+            SCOPES.JSXATTR,
+            SCOPES.JSXNESTED,
+            SCOPES.META_TAG_JSX,
+            SCOPES.ENT_NAME_TAG_OPEN_JSX,
+            SCOPES.SUPP_CLS_COMP_OPEN_JSX,
+          ]}
+          scopeMap={scopeMap}
         >
           Display
-        </span>
-        <span className={`${SOURCE_MAP.SPACE}`}> </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.META_TAG_JSX} ${SOURCE_MAP.JSXATTR} ${SOURCE_MAP.JSXNESTED} ${SOURCE_MAP.META_TAG_JSX} ${SOURCE_MAP.JSXATTR} ${SOURCE_MAP.ENT_OTHER_ATTRNAME_JSX}`}
+        </Scope>
+        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
+          {' '}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.META_TAG_JSX,
+            SCOPES.JSXATTR,
+            SCOPES.JSXNESTED,
+            SCOPES.META_TAG_JSX,
+            SCOPES.JSXATTR,
+            SCOPES.ENT_OTHER_ATTRNAME_JSX,
+          ]}
+          scopeMap={scopeMap}
         >
           value
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.META_TAG_JSX} ${SOURCE_MAP.JSXATTR} ${SOURCE_MAP.JSXNESTED} ${SOURCE_MAP.META_TAG_JSX} ${SOURCE_MAP.JSXATTR} ${SOURCE_MAP.KEY_OP_ASSIGN_JS}`}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.META_TAG_JSX,
+            SCOPES.JSXATTR,
+            SCOPES.JSXNESTED,
+            SCOPES.META_TAG_JSX,
+            SCOPES.JSXATTR,
+            SCOPES.KEY_OP_ASSIGN_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           =
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.META_TAG_JSX} ${SOURCE_MAP.JSXATTR} ${SOURCE_MAP.JSXNESTED} ${SOURCE_MAP.META_TAG_JSX} ${SOURCE_MAP.JSXATTR} ${SOURCE_MAP.META_EMB_EXPR_JS} ${SOURCE_MAP.PUNC_SEC_EMB_BEGIN_JSX}`}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.META_TAG_JSX,
+            SCOPES.JSXATTR,
+            SCOPES.JSXNESTED,
+            SCOPES.META_TAG_JSX,
+            SCOPES.JSXATTR,
+            SCOPES.META_EMB_EXPR_JS,
+            SCOPES.PUNC_SEC_EMB_BEGIN_JSX,
+          ]}
+          scopeMap={scopeMap}
         >
           {'{'}
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.META_TAG_JSX} ${SOURCE_MAP.JSXATTR} ${SOURCE_MAP.JSXNESTED} ${SOURCE_MAP.META_TAG_JSX} ${SOURCE_MAP.JSXATTR} ${SOURCE_MAP.META_EMB_EXPR_JS} ${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.VAR_LANG_THIS_JS}`}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.META_TAG_JSX,
+            SCOPES.JSXATTR,
+            SCOPES.JSXNESTED,
+            SCOPES.META_TAG_JSX,
+            SCOPES.JSXATTR,
+            SCOPES.META_EMB_EXPR_JS,
+            SCOPES.SOURCE_JS,
+            SCOPES.VAR_LANG_THIS_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           this
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.META_TAG_JSX} ${SOURCE_MAP.JSXATTR} ${SOURCE_MAP.JSXNESTED} ${SOURCE_MAP.META_TAG_JSX} ${SOURCE_MAP.JSXATTR} ${SOURCE_MAP.META_EMB_EXPR_JS} ${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.KEY_OP_ACCESS_JS}`}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.META_TAG_JSX,
+            SCOPES.JSXATTR,
+            SCOPES.JSXNESTED,
+            SCOPES.META_TAG_JSX,
+            SCOPES.JSXATTR,
+            SCOPES.META_EMB_EXPR_JS,
+            SCOPES.SOURCE_JS,
+            SCOPES.KEY_OP_ACCESS_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           .
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.META_TAG_JSX} ${SOURCE_MAP.JSXATTR} ${SOURCE_MAP.JSXNESTED} ${SOURCE_MAP.META_TAG_JSX} ${SOURCE_MAP.JSXATTR} ${SOURCE_MAP.META_EMB_EXPR_JS} ${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_PROP_OBJ_JS} ${SOURCE_MAP.VAR_OTHER_PROP_JS}`}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.META_TAG_JSX,
+            SCOPES.JSXATTR,
+            SCOPES.JSXNESTED,
+            SCOPES.META_TAG_JSX,
+            SCOPES.JSXATTR,
+            SCOPES.META_EMB_EXPR_JS,
+            SCOPES.SOURCE_JS,
+            SCOPES.META_PROP_OBJ_JS,
+            SCOPES.VAR_OTHER_PROP_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           state
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.META_TAG_JSX} ${SOURCE_MAP.JSXATTR} ${SOURCE_MAP.JSXNESTED} ${SOURCE_MAP.META_TAG_JSX} ${SOURCE_MAP.JSXATTR} ${SOURCE_MAP.META_EMB_EXPR_JS} ${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.KEY_OP_ACCESS_JS}`}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.META_TAG_JSX,
+            SCOPES.JSXATTR,
+            SCOPES.JSXNESTED,
+            SCOPES.META_TAG_JSX,
+            SCOPES.JSXATTR,
+            SCOPES.META_EMB_EXPR_JS,
+            SCOPES.SOURCE_JS,
+            SCOPES.KEY_OP_ACCESS_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           .
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.META_TAG_JSX} ${SOURCE_MAP.JSXATTR} ${SOURCE_MAP.JSXNESTED} ${SOURCE_MAP.META_TAG_JSX} ${SOURCE_MAP.JSXATTR} ${SOURCE_MAP.META_EMB_EXPR_JS} ${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_PROP_OBJ_JS} ${SOURCE_MAP.VAR_OTHER_PROP_JS}`}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.META_TAG_JSX,
+            SCOPES.JSXATTR,
+            SCOPES.JSXNESTED,
+            SCOPES.META_TAG_JSX,
+            SCOPES.JSXATTR,
+            SCOPES.META_EMB_EXPR_JS,
+            SCOPES.SOURCE_JS,
+            SCOPES.META_PROP_OBJ_JS,
+            SCOPES.VAR_OTHER_PROP_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           next
-        </span>
-        <span className={`${SOURCE_MAP.SPACE}`}> </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.META_TAG_JSX} ${SOURCE_MAP.JSXATTR} ${SOURCE_MAP.JSXNESTED} ${SOURCE_MAP.META_TAG_JSX} ${SOURCE_MAP.JSXATTR} ${SOURCE_MAP.META_EMB_EXPR_JS} ${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.KEY_OP_LOGIC_JS}`}
+        </Scope>
+        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
+          {' '}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.META_TAG_JSX,
+            SCOPES.JSXATTR,
+            SCOPES.JSXNESTED,
+            SCOPES.META_TAG_JSX,
+            SCOPES.JSXATTR,
+            SCOPES.META_EMB_EXPR_JS,
+            SCOPES.SOURCE_JS,
+            SCOPES.KEY_OP_LOGIC_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           ||
-        </span>
-        <span className={`${SOURCE_MAP.SPACE}`}> </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.META_TAG_JSX} ${SOURCE_MAP.JSXATTR} ${SOURCE_MAP.JSXNESTED} ${SOURCE_MAP.META_TAG_JSX} ${SOURCE_MAP.JSXATTR} ${SOURCE_MAP.META_EMB_EXPR_JS} ${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.VAR_LANG_THIS_JS}`}
+        </Scope>
+        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
+          {' '}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.META_TAG_JSX,
+            SCOPES.JSXATTR,
+            SCOPES.JSXNESTED,
+            SCOPES.META_TAG_JSX,
+            SCOPES.JSXATTR,
+            SCOPES.META_EMB_EXPR_JS,
+            SCOPES.SOURCE_JS,
+            SCOPES.VAR_LANG_THIS_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           this
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.META_TAG_JSX} ${SOURCE_MAP.JSXATTR} ${SOURCE_MAP.JSXNESTED} ${SOURCE_MAP.META_TAG_JSX} ${SOURCE_MAP.JSXATTR} ${SOURCE_MAP.META_EMB_EXPR_JS} ${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.KEY_OP_ACCESS_JS}`}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.META_TAG_JSX,
+            SCOPES.JSXATTR,
+            SCOPES.JSXNESTED,
+            SCOPES.META_TAG_JSX,
+            SCOPES.JSXATTR,
+            SCOPES.META_EMB_EXPR_JS,
+            SCOPES.SOURCE_JS,
+            SCOPES.KEY_OP_ACCESS_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           .
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.META_TAG_JSX} ${SOURCE_MAP.JSXATTR} ${SOURCE_MAP.JSXNESTED} ${SOURCE_MAP.META_TAG_JSX} ${SOURCE_MAP.JSXATTR} ${SOURCE_MAP.META_EMB_EXPR_JS} ${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_PROP_OBJ_JS} ${SOURCE_MAP.VAR_OTHER_PROP_JS}`}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.META_TAG_JSX,
+            SCOPES.JSXATTR,
+            SCOPES.JSXNESTED,
+            SCOPES.META_TAG_JSX,
+            SCOPES.JSXATTR,
+            SCOPES.META_EMB_EXPR_JS,
+            SCOPES.SOURCE_JS,
+            SCOPES.META_PROP_OBJ_JS,
+            SCOPES.VAR_OTHER_PROP_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           state
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.META_TAG_JSX} ${SOURCE_MAP.JSXATTR} ${SOURCE_MAP.JSXNESTED} ${SOURCE_MAP.META_TAG_JSX} ${SOURCE_MAP.JSXATTR} ${SOURCE_MAP.META_EMB_EXPR_JS} ${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.KEY_OP_ACCESS_JS}`}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.META_TAG_JSX,
+            SCOPES.JSXATTR,
+            SCOPES.JSXNESTED,
+            SCOPES.META_TAG_JSX,
+            SCOPES.JSXATTR,
+            SCOPES.META_EMB_EXPR_JS,
+            SCOPES.SOURCE_JS,
+            SCOPES.KEY_OP_ACCESS_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           .
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.META_TAG_JSX} ${SOURCE_MAP.JSXATTR} ${SOURCE_MAP.JSXNESTED} ${SOURCE_MAP.META_TAG_JSX} ${SOURCE_MAP.JSXATTR} ${SOURCE_MAP.META_EMB_EXPR_JS} ${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_PROP_OBJ_JS} ${SOURCE_MAP.VAR_OTHER_PROP_JS}`}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.META_TAG_JSX,
+            SCOPES.JSXATTR,
+            SCOPES.JSXNESTED,
+            SCOPES.META_TAG_JSX,
+            SCOPES.JSXATTR,
+            SCOPES.META_EMB_EXPR_JS,
+            SCOPES.SOURCE_JS,
+            SCOPES.META_PROP_OBJ_JS,
+            SCOPES.VAR_OTHER_PROP_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           total
-        </span>
-        <span className={`${SOURCE_MAP.SPACE}`}> </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.META_TAG_JSX} ${SOURCE_MAP.JSXATTR} ${SOURCE_MAP.JSXNESTED} ${SOURCE_MAP.META_TAG_JSX} ${SOURCE_MAP.JSXATTR} ${SOURCE_MAP.META_EMB_EXPR_JS} ${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.KEY_OP_LOGIC_JS}`}
+        </Scope>
+        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
+          {' '}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.META_TAG_JSX,
+            SCOPES.JSXATTR,
+            SCOPES.JSXNESTED,
+            SCOPES.META_TAG_JSX,
+            SCOPES.JSXATTR,
+            SCOPES.META_EMB_EXPR_JS,
+            SCOPES.SOURCE_JS,
+            SCOPES.KEY_OP_LOGIC_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           ||
-        </span>
-        <span className={`${SOURCE_MAP.SPACE}`}> </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.META_TAG_JSX} ${SOURCE_MAP.JSXATTR} ${SOURCE_MAP.JSXNESTED} ${SOURCE_MAP.META_TAG_JSX} ${SOURCE_MAP.JSXATTR} ${SOURCE_MAP.META_EMB_EXPR_JS} ${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.STR_QUO_SINGLE_JS} ${SOURCE_MAP.PUNC_DEF_STR_BEGIN_JS}}`}
+        </Scope>
+        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
+          {' '}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.META_TAG_JSX,
+            SCOPES.JSXATTR,
+            SCOPES.JSXNESTED,
+            SCOPES.META_TAG_JSX,
+            SCOPES.JSXATTR,
+            SCOPES.META_EMB_EXPR_JS,
+            SCOPES.SOURCE_JS,
+            SCOPES.STR_QUO_SINGLE_JS,
+            SCOPES.PUNC_DEF_STR_BEGIN_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           '
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.META_TAG_JSX} ${SOURCE_MAP.JSXATTR} ${SOURCE_MAP.JSXNESTED} ${SOURCE_MAP.META_TAG_JSX} ${SOURCE_MAP.JSXATTR} ${SOURCE_MAP.META_EMB_EXPR_JS} ${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.STR_QUO_SINGLE_JS}`}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.META_TAG_JSX,
+            SCOPES.JSXATTR,
+            SCOPES.JSXNESTED,
+            SCOPES.META_TAG_JSX,
+            SCOPES.JSXATTR,
+            SCOPES.META_EMB_EXPR_JS,
+            SCOPES.SOURCE_JS,
+            SCOPES.STR_QUO_SINGLE_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           0
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.META_TAG_JSX} ${SOURCE_MAP.JSXATTR} ${SOURCE_MAP.JSXNESTED} ${SOURCE_MAP.META_TAG_JSX} ${SOURCE_MAP.JSXATTR} ${SOURCE_MAP.META_EMB_EXPR_JS} ${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.STR_QUO_SINGLE_JS} ${SOURCE_MAP.PUNC_DEF_STR_END_JS}`}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.META_TAG_JSX,
+            SCOPES.JSXATTR,
+            SCOPES.JSXNESTED,
+            SCOPES.META_TAG_JSX,
+            SCOPES.JSXATTR,
+            SCOPES.META_EMB_EXPR_JS,
+            SCOPES.SOURCE_JS,
+            SCOPES.STR_QUO_SINGLE_JS,
+            SCOPES.PUNC_DEF_STR_END_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           '
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.META_TAG_JS} ${SOURCE_MAP.JSXATTR} ${SOURCE_MAP.JSXNESTED} ${SOURCE_MAP.META_TAG_JSX} ${SOURCE_MAP.JSXATTR} ${SOURCE_MAP.META_EMB_EXPR_JS} ${SOURCE_MAP.PUNC_SEC_EMB_END_JSX}`}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.META_TAG_JS,
+            SCOPES.JSXATTR,
+            SCOPES.JSXNESTED,
+            SCOPES.META_TAG_JSX,
+            SCOPES.JSXATTR,
+            SCOPES.META_EMB_EXPR_JS,
+            SCOPES.PUNC_SEC_EMB_END_JSX,
+          ]}
+          scopeMap={scopeMap}
         >
           }
-        </span>
-        <span className={`${SOURCE_MAP.SPACE}`}> </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.META_TAG_JSX} ${SOURCE_MAP.JSXATTR} ${SOURCE_MAP.JSXNESTED} ${SOURCE_MAP.META_TAG_JSX} ${SOURCE_MAP.PUNC_DEF_TAG_JS}}`}
+        </Scope>
+        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
+          {' '}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.META_TAG_JSX,
+            SCOPES.JSXATTR,
+            SCOPES.JSXNESTED,
+            SCOPES.META_TAG_JSX,
+            SCOPES.PUNC_DEF_TAG_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           {'/>'}
-        </span>
+        </Scope>
         <br />
-        <span className={`${SOURCE_MAP.SPACE}`}>{'      '}</span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS}  ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.META_TAG_JSX} ${SOURCE_MAP.JSXATTR} ${SOURCE_MAP.PUNC_DEF_TAG_JSX} ${SOURCE_MAP.JSXENDTAGSTART}`}
+        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
+          {'      '}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.META_TAG_JSX,
+            SCOPES.JSXATTR,
+            SCOPES.PUNC_DEF_TAG_JSX,
+            SCOPES.JSXENDTAGSTART,
+          ]}
+          scopeMap={scopeMap}
         >
           {'</'}
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS}  ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.META_TAG_JSX} ${SOURCE_MAP.ENT_NAME_TAG_CLOSE_JSX}`}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.META_TAG_JSX,
+            SCOPES.ENT_NAME_TAG_CLOSE_JSX,
+          ]}
+          scopeMap={scopeMap}
         >
           div
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS}  ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.META_TAG_JSX} ${SOURCE_MAP.PUNC_DEF_TAG_JSX}`}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.META_TAG_JSX,
+            SCOPES.PUNC_DEF_TAG_JSX,
+          ]}
+          scopeMap={scopeMap}
         >
           {'>'}
-        </span>
+        </Scope>
         <br />
-        <span className={`${SOURCE_MAP.SPACE}`}>{'    '}</span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.META_BRACE_ROUND_JS}`}
+        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
+          {'    '}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.META_BRACE_ROUND_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           )
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.PUNC_TERM_STMT_JS}`}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.PUNC_TERM_STMT_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           ;
-        </span>
+        </Scope>
         <br />
-        <span className={`${SOURCE_MAP.SPACE}`}>{'  '}</span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.META_BRACE_CURLY_JS}`}
+        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
+          {'  '}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.META_BRACE_CURLY_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           }
-        </span>
+        </Scope>
         <br />
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.PUNC_SEC_CLS_END_JS}`}
+        <Scope
+          scopes={[SCOPES.SOURCE_JS, SCOPES.PUNC_SEC_CLS_END_JS]}
+          scopeMap={scopeMap}
         >
           }
-        </span>
+        </Scope>
         <br /> <br />
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.KEY_CTRL_MOD_JS}`}
+        <Scope
+          scopes={[SCOPES.SOURCE_JS, SCOPES.KEY_CTRL_MOD_JS]}
+          scopeMap={scopeMap}
         >
           export
-        </span>
-        <span className={`${SOURCE_MAP.SPACE}`}> </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.KEY_CTRL_MOD_JS}`}
+        </Scope>
+        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
+          {' '}
+        </Scope>
+        <Scope
+          scopes={[SCOPES.SOURCE_JS, SCOPES.KEY_CTRL_MOD_JS]}
+          scopeMap={scopeMap}
         >
           default
-        </span>
-        <span className={`${SOURCE_MAP.SPACE}`}> </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.VAR_OTHER_RW_JS}`}
+        </Scope>
+        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
+          {' '}
+        </Scope>
+        <Scope
+          scopes={[SCOPES.SOURCE_JS, SCOPES.VAR_OTHER_RW_JS]}
+          scopeMap={scopeMap}
         >
           App
-        </span>
-        <span
-          className={`${SOURCE_MAP.SOURCE_JS} ${SOURCE_MAP.META_CLS_BODY_JS} ${SOURCE_MAP.META_FUNC_METH_JS} ${SOURCE_MAP.PUNC_TERM_STMT_JS}`}
+        </Scope>
+        <Scope
+          scopes={[
+            SCOPES.SOURCE_JS,
+            SCOPES.META_CLS_BODY_JS,
+            SCOPES.META_FUNC_METH_JS,
+            SCOPES.PUNC_TERM_STMT_JS,
+          ]}
+          scopeMap={scopeMap}
         >
           ;
-        </span>
+        </Scope>
         <br />
       </code>
     </pre>
@@ -756,68 +1751,68 @@ export default function JSX({}) {
 }
 
 export const EXISTING_SCOPES = [
-  SOURCE_MAP.SPACE,
-  SOURCE_MAP.EDT_FG,
-  SOURCE_MAP.EDT_BG,
-  SOURCE_MAP.SOURCE_JS,
-  SOURCE_MAP.KEY_CTRL_MOD_JS,
-  SOURCE_MAP.KEY_CTRL_FLOW_JS,
-  SOURCE_MAP.KEY_OP_ACCESS_JS,
-  SOURCE_MAP.KEY_OP_LOGIC_JS,
-  SOURCE_MAP.KEY_OP_ASSIGN_JS,
-  SOURCE_MAP.VAR_OTHER_RW_JS,
-  SOURCE_MAP.VAR_OTHER_PROP_JS,
-  SOURCE_MAP.VAR_LANG_THIS_JS,
-  SOURCE_MAP.CONST_OTHER_OBJ_KEY_JS,
-  SOURCE_MAP.CONST_NUM_JS,
-  SOURCE_MAP.CONST_LANG_UNDEF_JS,
-  SOURCE_MAP.STR_QUO_MOD_JS,
-  SOURCE_MAP.STR_QUO_SINGLE_JS,
-  SOURCE_MAP.STR_QUO_DOUBLE_JS,
-  SOURCE_MAP.STR_UNQUO_JS,
-  SOURCE_MAP.PUNC_DEF_STR_BEGIN_JS,
-  SOURCE_MAP.PUNC_TERM_STMT_JS,
-  SOURCE_MAP.PUNC_SEC_CLS_BEGIN_JS,
-  SOURCE_MAP.PUNC_DEF_TAG_JSX,
-  SOURCE_MAP.PUNC_DEF_PARAM_END_JS,
-  SOURCE_MAP.PUNC_DEF_STR_BEGIN_JS,
-  SOURCE_MAP.PUNC_DEF_STR_END_JS,
-  SOURCE_MAP.PUNC_SEP_KV_JS,
-  SOURCE_MAP.PUNC_DEF_PARAM_BEGIN_JS,
-  SOURCE_MAP.PUNC_DEF_TAG_JS,
-  SOURCE_MAP.PUNC_SEC_CLS_END_JS,
-  SOURCE_MAP.PUNC_DEF_TAG_JSX,
-  SOURCE_MAP.PUNC_DEF_STR_BEGIN_JS,
-  SOURCE_MAP.PUNC_SEC_EMB_BEGIN_JSX,
-  SOURCE_MAP.PUNC_SEC_EMB_END_JSX,
-  SOURCE_MAP.META_CLS_BODY_JS,
-  SOURCE_MAP.META_DEL_COMMA_JS,
-  SOURCE_MAP.META_FUNC_METH_JS,
-  SOURCE_MAP.META_CLS_JS,
-  SOURCE_MAP.META_BRACE_CURLY_JS,
-  SOURCE_MAP.META_FUNCCALL_WARG_JS,
-  SOURCE_MAP.META_METHCALL_WARG_JS,
-  SOURCE_MAP.META_FUNC_ARROW_JS,
-  SOURCE_MAP.META_FUNC_PARAM_JS,
-  SOURCE_MAP.META_PROP_OBJ_JS,
-  SOURCE_MAP.META_CLS_EXTD_JS,
-  SOURCE_MAP.META_BRACE_ROUND_JS,
-  SOURCE_MAP.META_BRACE_CURLY_LITOBJ_JS,
-  SOURCE_MAP.META_TAG_JS,
-  SOURCE_MAP.META_TAG_JSX,
-  SOURCE_MAP.META_EMB_EXPR_JS,
-  SOURCE_MAP.STRG_TYPE_CLS_JS,
-  SOURCE_MAP.STRG_TYPE_EXTD_JS,
-  SOURCE_MAP.STRG_TYPE_FUNC_ARROW_JS,
-  SOURCE_MAP.ENT_NAME_CLS_JS,
-  SOURCE_MAP.ENT_NAME_FUNC_METH_JS,
-  SOURCE_MAP.ENT_NAME_FUNC_JS,
-  SOURCE_MAP.ENT_NAME_TAG_OPEN_JSX,
-  SOURCE_MAP.ENT_NAME_TAG_CLOSE_JSX,
-  SOURCE_MAP.ENT_OTHER_ATTRNAME_JSX,
-  SOURCE_MAP.SUPP_CLS_COMP_OPEN_JSX,
-  SOURCE_MAP.JSXATTR,
-  SOURCE_MAP.JSXNESTED,
-  SOURCE_MAP.JSXSTARTTAGEND,
-  SOURCE_MAP.JSXENDTAGSTART,
+  SCOPES.SPACE,
+  SCOPES.EDT_FG,
+  SCOPES.EDT_BG,
+  SCOPES.SOURCE_JS,
+  SCOPES.KEY_CTRL_MOD_JS,
+  SCOPES.KEY_CTRL_FLOW_JS,
+  SCOPES.KEY_OP_ACCESS_JS,
+  SCOPES.KEY_OP_LOGIC_JS,
+  SCOPES.KEY_OP_ASSIGN_JS,
+  SCOPES.VAR_OTHER_RW_JS,
+  SCOPES.VAR_OTHER_PROP_JS,
+  SCOPES.VAR_LANG_THIS_JS,
+  SCOPES.CONST_OTHER_OBJ_KEY_JS,
+  SCOPES.CONST_NUM_JS,
+  SCOPES.CONST_LANG_UNDEF_JS,
+  SCOPES.STR_QUO_MOD_JS,
+  SCOPES.STR_QUO_SINGLE_JS,
+  SCOPES.STR_QUO_DOUBLE_JS,
+  SCOPES.STR_UNQUO_JS,
+  SCOPES.PUNC_DEF_STR_BEGIN_JS,
+  SCOPES.PUNC_TERM_STMT_JS,
+  SCOPES.PUNC_SEC_CLS_BEGIN_JS,
+  SCOPES.PUNC_DEF_TAG_JSX,
+  SCOPES.PUNC_DEF_PARAM_END_JS,
+  SCOPES.PUNC_DEF_STR_BEGIN_JS,
+  SCOPES.PUNC_DEF_STR_END_JS,
+  SCOPES.PUNC_SEP_KV_JS,
+  SCOPES.PUNC_DEF_PARAM_BEGIN_JS,
+  SCOPES.PUNC_DEF_TAG_JS,
+  SCOPES.PUNC_SEC_CLS_END_JS,
+  SCOPES.PUNC_DEF_TAG_JSX,
+  SCOPES.PUNC_DEF_STR_BEGIN_JS,
+  SCOPES.PUNC_SEC_EMB_BEGIN_JSX,
+  SCOPES.PUNC_SEC_EMB_END_JSX,
+  SCOPES.META_CLS_BODY_JS,
+  SCOPES.META_DEL_COMMA_JS,
+  SCOPES.META_FUNC_METH_JS,
+  SCOPES.META_CLS_JS,
+  SCOPES.META_BRACE_CURLY_JS,
+  SCOPES.META_FUNCCALL_WARG_JS,
+  SCOPES.META_METHCALL_WARG_JS,
+  SCOPES.META_FUNC_ARROW_JS,
+  SCOPES.META_FUNC_PARAM_JS,
+  SCOPES.META_PROP_OBJ_JS,
+  SCOPES.META_CLS_EXTD_JS,
+  SCOPES.META_BRACE_ROUND_JS,
+  SCOPES.META_BRACE_CURLY_LITOBJ_JS,
+  SCOPES.META_TAG_JS,
+  SCOPES.META_TAG_JSX,
+  SCOPES.META_EMB_EXPR_JS,
+  SCOPES.STRG_TYPE_CLS_JS,
+  SCOPES.STRG_TYPE_EXTD_JS,
+  SCOPES.STRG_TYPE_FUNC_ARROW_JS,
+  SCOPES.ENT_NAME_CLS_JS,
+  SCOPES.ENT_NAME_FUNC_METH_JS,
+  SCOPES.ENT_NAME_FUNC_JS,
+  SCOPES.ENT_NAME_TAG_OPEN_JSX,
+  SCOPES.ENT_NAME_TAG_CLOSE_JSX,
+  SCOPES.ENT_OTHER_ATTRNAME_JSX,
+  SCOPES.SUPP_CLS_COMP_OPEN_JSX,
+  SCOPES.JSXATTR,
+  SCOPES.JSXNESTED,
+  SCOPES.JSXSTARTTAGEND,
+  SCOPES.JSXENDTAGSTART,
 ];
