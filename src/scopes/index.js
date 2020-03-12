@@ -42,7 +42,7 @@ const SCOPES = {
   PUNC_SEC_EMB_END_JSX: 'punctuation.section.embedded.end.jsx',
   // Meta
   META_CLS_BODY_JS: 'meta.class.body.js',
-  META_DEL_COMMA_JS: ' meta.delimiter.comma.js',
+  META_DEL_COMMA_JS: 'meta.delimiter.comma.js',
   META_FUNC_METH_JS: 'meta.function.method.js',
   META_CLS_JS: 'meta.class.js',
   META_BRACE_CURLY_JS: 'meta.brace.curly.js',

@@ -1,61 +1,37 @@
 import React from 'react';
+// Components
 import Scope from './Scope';
+// Variables
 import { SCOPES } from '../../scopes';
 
-export default function JSX({ scopeMap }) {
+export default function JSX() {
   return (
     <pre>
       <code className="jsx">
-        <Scope
-          scopes={[SCOPES.SOURCE_JS, SCOPES.KEY_CTRL_MOD_JS]}
-          scopeMap={scopeMap}
-        >
+        <Scope scopes={[SCOPES.SOURCE_JS, SCOPES.KEY_CTRL_MOD_JS]}>
           import
         </Scope>
-        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
-          {' '}
-        </Scope>
-        <Scope
-          scopes={[SCOPES.SOURCE_JS, SCOPES.VAR_OTHER_RW_JS]}
-          scopeMap={scopeMap}
-        >
-          React
-        </Scope>
-        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
-          {' '}
-        </Scope>
-        <Scope
-          scopes={[SCOPES.SOURCE_JS, SCOPES.KEY_CTRL_MOD_JS]}
-          scopeMap={scopeMap}
-        >
-          from
-        </Scope>
-        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
-          {' '}
-        </Scope>
+        <Scope scopes={[SCOPES.SPACE]}> </Scope>
+        <Scope scopes={[SCOPES.SOURCE_JS, SCOPES.VAR_OTHER_RW_JS]}>React</Scope>
+        <Scope scopes={[SCOPES.SPACE]}> </Scope>
+        <Scope scopes={[SCOPES.SOURCE_JS, SCOPES.KEY_CTRL_MOD_JS]}>from</Scope>
+        <Scope scopes={[SCOPES.SPACE]}> </Scope>
         <Scope
           scopes={[
             SCOPES.SOURCE_JS,
             SCOPES.STR_QUO_MOD_JS,
             SCOPES.PUNC_DEF_STR_BEGIN_JS,
           ]}
-          scopeMap={scopeMap}
         >
           '
         </Scope>
-        <Scope
-          scopes={[SCOPES.SOURCE_JS, SCOPES.STR_QUO_MOD_JS]}
-          scopeMap={scopeMap}
-        >
-          react
-        </Scope>
+        <Scope scopes={[SCOPES.SOURCE_JS, SCOPES.STR_QUO_MOD_JS]}>react</Scope>
         <Scope
           scopes={[
             SCOPES.SOURCE_JS,
             SCOPES.STR_QUO_MOD_JS,
             SCOPES.PUNC_DEF_STR_BEGIN_JS,
           ]}
-          scopeMap={scopeMap}
         >
           '
         </Scope>
@@ -66,52 +42,30 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_FUNC_METH_JS,
             SCOPES.PUNC_TERM_STMT_JS,
           ]}
-          scopeMap={scopeMap}
         >
           ;
         </Scope>
         <br />
-        <Scope
-          scopes={[SCOPES.SOURCE_JS, SCOPES.KEY_CTRL_MOD_JS]}
-          scopeMap={scopeMap}
-        >
+        <Scope scopes={[SCOPES.SOURCE_JS, SCOPES.KEY_CTRL_MOD_JS]}>
           import
         </Scope>
-        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
-          {' '}
-        </Scope>
-        <Scope
-          scopes={[SCOPES.SOURCE_JS, SCOPES.VAR_OTHER_RW_JS]}
-          scopeMap={scopeMap}
-        >
+        <Scope scopes={[SCOPES.SPACE]}> </Scope>
+        <Scope scopes={[SCOPES.SOURCE_JS, SCOPES.VAR_OTHER_RW_JS]}>
           calculate
         </Scope>
-        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
-          {' '}
-        </Scope>
-        <Scope
-          scopes={[SCOPES.SOURCE_JS, SCOPES.KEY_CTRL_MOD_JS]}
-          scopeMap={scopeMap}
-        >
-          from
-        </Scope>
-        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
-          {' '}
-        </Scope>
+        <Scope scopes={[SCOPES.SPACE]}> </Scope>
+        <Scope scopes={[SCOPES.SOURCE_JS, SCOPES.KEY_CTRL_MOD_JS]}>from</Scope>
+        <Scope scopes={[SCOPES.SPACE]}> </Scope>
         <Scope
           scopes={[
             SCOPES.SOURCE_JS,
             SCOPES.STR_QUO_MOD_JS,
             SCOPES.PUNC_DEF_STR_BEGIN_JS,
           ]}
-          scopeMap={scopeMap}
         >
           '
         </Scope>
-        <Scope
-          scopes={[SCOPES.SOURCE_JS, SCOPES.STR_QUO_MOD_JS]}
-          scopeMap={scopeMap}
-        >
+        <Scope scopes={[SCOPES.SOURCE_JS, SCOPES.STR_QUO_MOD_JS]}>
           ../logic/calculate
         </Scope>
         <Scope
@@ -120,7 +74,6 @@ export default function JSX({ scopeMap }) {
             SCOPES.STR_QUO_MOD_JS,
             SCOPES.PUNC_DEF_STR_BEGIN_JS,
           ]}
-          scopeMap={scopeMap}
         >
           '
         </Scope>
@@ -131,34 +84,24 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_FUNC_METH_JS,
             SCOPES.PUNC_TERM_STMT_JS,
           ]}
-          scopeMap={scopeMap}
         >
           ;
         </Scope>
         <br />
-        <Scope
-          scopes={[SCOPES.SOURCE_JS, SCOPES.KEY_CTRL_MOD_JS]}
-          scopeMap={scopeMap}
-        >
+        <Scope scopes={[SCOPES.SOURCE_JS, SCOPES.KEY_CTRL_MOD_JS]}>
           import
         </Scope>
-        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
-          {' '}
-        </Scope>
+        <Scope scopes={[SCOPES.SPACE]}> </Scope>
         <Scope
           scopes={[
             SCOPES.SOURCE_JS,
             SCOPES.STR_QUO_MOD_JS,
             SCOPES.PUNC_DEF_STR_BEGIN_JS,
           ]}
-          scopeMap={scopeMap}
         >
           '
         </Scope>
-        <Scope
-          scopes={[SCOPES.SOURCE_JS, SCOPES.STR_QUO_MOD_JS]}
-          scopeMap={scopeMap}
-        >
+        <Scope scopes={[SCOPES.SOURCE_JS, SCOPES.STR_QUO_MOD_JS]}>
           ./App.css
         </Scope>
         <Scope
@@ -167,7 +110,6 @@ export default function JSX({ scopeMap }) {
             SCOPES.STR_QUO_MOD_JS,
             SCOPES.PUNC_DEF_STR_BEGIN_JS,
           ]}
-          scopeMap={scopeMap}
         >
           '
         </Scope>
@@ -178,52 +120,30 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_FUNC_METH_JS,
             SCOPES.PUNC_TERM_STMT_JS,
           ]}
-          scopeMap={scopeMap}
         >
           ;
         </Scope>
         <br />
-        <Scope
-          scopes={[SCOPES.SOURCE_JS, SCOPES.KEY_CTRL_MOD_JS]}
-          scopeMap={scopeMap}
-        >
+        <Scope scopes={[SCOPES.SOURCE_JS, SCOPES.KEY_CTRL_MOD_JS]}>
           import
         </Scope>
-        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
-          {' '}
-        </Scope>
-        <Scope
-          scopes={[SCOPES.SOURCE_JS, SCOPES.VAR_OTHER_RW_JS]}
-          scopeMap={scopeMap}
-        >
+        <Scope scopes={[SCOPES.SPACE]}> </Scope>
+        <Scope scopes={[SCOPES.SOURCE_JS, SCOPES.VAR_OTHER_RW_JS]}>
           ButtonPanel
         </Scope>
-        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
-          {' '}
-        </Scope>
-        <Scope
-          scopes={[SCOPES.SOURCE_JS, SCOPES.KEY_CTRL_MOD_JS]}
-          scopeMap={scopeMap}
-        >
-          from
-        </Scope>
-        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
-          {' '}
-        </Scope>
+        <Scope scopes={[SCOPES.SPACE]}> </Scope>
+        <Scope scopes={[SCOPES.SOURCE_JS, SCOPES.KEY_CTRL_MOD_JS]}>from</Scope>
+        <Scope scopes={[SCOPES.SPACE]}> </Scope>
         <Scope
           scopes={[
             SCOPES.SOURCE_JS,
             SCOPES.STR_QUO_MOD_JS,
             SCOPES.PUNC_DEF_STR_BEGIN_JS,
           ]}
-          scopeMap={scopeMap}
         >
           '
         </Scope>
-        <Scope
-          scopes={[SCOPES.SOURCE_JS, SCOPES.STR_QUO_MOD_JS]}
-          scopeMap={scopeMap}
-        >
+        <Scope scopes={[SCOPES.SOURCE_JS, SCOPES.STR_QUO_MOD_JS]}>
           ./ButtonPanel
         </Scope>
         <Scope
@@ -232,7 +152,6 @@ export default function JSX({ scopeMap }) {
             SCOPES.STR_QUO_MOD_JS,
             SCOPES.PUNC_DEF_STR_BEGIN_JS,
           ]}
-          scopeMap={scopeMap}
         >
           '
         </Scope>
@@ -243,52 +162,30 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_FUNC_METH_JS,
             SCOPES.PUNC_TERM_STMT_JS,
           ]}
-          scopeMap={scopeMap}
         >
           ;
         </Scope>
         <br />
-        <Scope
-          scopes={[SCOPES.SOURCE_JS, SCOPES.KEY_CTRL_MOD_JS]}
-          scopeMap={scopeMap}
-        >
+        <Scope scopes={[SCOPES.SOURCE_JS, SCOPES.KEY_CTRL_MOD_JS]}>
           import
         </Scope>
-        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
-          {' '}
-        </Scope>
-        <Scope
-          scopes={[SCOPES.SOURCE_JS, SCOPES.VAR_OTHER_RW_JS]}
-          scopeMap={scopeMap}
-        >
+        <Scope scopes={[SCOPES.SPACE]}> </Scope>
+        <Scope scopes={[SCOPES.SOURCE_JS, SCOPES.VAR_OTHER_RW_JS]}>
           Display
         </Scope>
-        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
-          {' '}
-        </Scope>
-        <Scope
-          scopes={[SCOPES.SOURCE_JS, SCOPES.KEY_CTRL_MOD_JS]}
-          scopeMap={scopeMap}
-        >
-          from
-        </Scope>
-        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
-          {' '}
-        </Scope>
+        <Scope scopes={[SCOPES.SPACE]}> </Scope>
+        <Scope scopes={[SCOPES.SOURCE_JS, SCOPES.KEY_CTRL_MOD_JS]}>from</Scope>
+        <Scope scopes={[SCOPES.SPACE]}> </Scope>
         <Scope
           scopes={[
             SCOPES.SOURCE_JS,
             SCOPES.STR_QUO_MOD_JS,
             SCOPES.PUNC_DEF_STR_BEGIN_JS,
           ]}
-          scopeMap={scopeMap}
         >
           '
         </Scope>
-        <Scope
-          scopes={[SCOPES.SOURCE_JS, SCOPES.STR_QUO_MOD_JS]}
-          scopeMap={scopeMap}
-        >
+        <Scope scopes={[SCOPES.SOURCE_JS, SCOPES.STR_QUO_MOD_JS]}>
           ./Display
         </Scope>
         <Scope
@@ -297,7 +194,6 @@ export default function JSX({ scopeMap }) {
             SCOPES.STR_QUO_MOD_JS,
             SCOPES.PUNC_DEF_STR_BEGIN_JS,
           ]}
-          scopeMap={scopeMap}
         >
           '
         </Scope>
@@ -308,7 +204,6 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_FUNC_METH_JS,
             SCOPES.PUNC_TERM_STMT_JS,
           ]}
-          scopeMap={scopeMap}
         >
           ;
         </Scope>
@@ -319,66 +214,33 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_CLS_JS,
             SCOPES.STRG_TYPE_CLS_JS,
           ]}
-          scopeMap={scopeMap}
         >
           class
         </Scope>
-        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
-          {' '}
-        </Scope>
-        <Scope
-          scopes={[SCOPES.SOURCE_JS, SCOPES.ENT_NAME_CLS_JS]}
-          scopeMap={scopeMap}
-        >
-          App
-        </Scope>
-        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
-          {' '}
-        </Scope>
+        <Scope scopes={[SCOPES.SPACE]}> </Scope>
+        <Scope scopes={[SCOPES.SOURCE_JS, SCOPES.ENT_NAME_CLS_JS]}>App</Scope>
+        <Scope scopes={[SCOPES.SPACE]}> </Scope>
         <Scope
           scopes={[
             SCOPES.SOURCE_JS,
             SCOPES.META_CLS_EXTD_JS,
             SCOPES.STRG_TYPE_EXTD_JS,
           ]}
-          scopeMap={scopeMap}
         >
           extends
         </Scope>
-        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
-          {' '}
-        </Scope>
-        <Scope
-          scopes={[SCOPES.SOURCE_JS, SCOPES.ENT_NAME_CLS_JS]}
-          scopeMap={scopeMap}
-        >
-          React
-        </Scope>
-        <Scope
-          scopes={[SCOPES.SOURCE_JS, SCOPES.KEY_OP_ACCESS_JS]}
-          scopeMap={scopeMap}
-        >
-          .
-        </Scope>
-        <Scope
-          scopes={[SCOPES.SOURCE_JS, SCOPES.ENT_NAME_CLS_JS]}
-          scopeMap={scopeMap}
-        >
+        <Scope scopes={[SCOPES.SPACE]}> </Scope>
+        <Scope scopes={[SCOPES.SOURCE_JS, SCOPES.ENT_NAME_CLS_JS]}>React</Scope>
+        <Scope scopes={[SCOPES.SOURCE_JS, SCOPES.KEY_OP_ACCESS_JS]}>.</Scope>
+        <Scope scopes={[SCOPES.SOURCE_JS, SCOPES.ENT_NAME_CLS_JS]}>
           Component
         </Scope>
-        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
-          {' '}
-        </Scope>
-        <Scope
-          scopes={[SCOPES.SOURCE_JS, SCOPES.PUNC_SEC_CLS_BEGIN_JS]}
-          scopeMap={scopeMap}
-        >
+        <Scope scopes={[SCOPES.SPACE]}> </Scope>
+        <Scope scopes={[SCOPES.SOURCE_JS, SCOPES.PUNC_SEC_CLS_BEGIN_JS]}>
           {'{'}
         </Scope>
         <br />
-        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
-          {'  '}
-        </Scope>
+        <Scope scopes={[SCOPES.SPACE]}>{'  '}</Scope>
         <Scope
           scopes={[
             SCOPES.SOURCE_JS,
@@ -386,7 +248,6 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_FUNC_METH_JS,
             SCOPES.ENT_NAME_FUNC_METH_JS,
           ]}
-          scopeMap={scopeMap}
         >
           constructor
         </Scope>
@@ -398,7 +259,6 @@ export default function JSX({ scopeMap }) {
             SCOPES.PUNC_DEF_PARAM_BEGIN_JS,
             SCOPES.META_BRACE_ROUND_JS,
           ]}
-          scopeMap={scopeMap}
         >
           (
         </Scope>
@@ -410,7 +270,6 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_FUNC_PARAM_JS,
             SCOPES.VAR_OTHER_RW_JS,
           ]}
-          scopeMap={scopeMap}
         >
           props
         </Scope>
@@ -422,7 +281,6 @@ export default function JSX({ scopeMap }) {
             SCOPES.PUNC_DEF_PARAM_END_JS,
             SCOPES.META_BRACE_ROUND_JS,
           ]}
-          scopeMap={scopeMap}
         >
           )
         </Scope>
@@ -433,14 +291,11 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_FUNC_METH_JS,
             SCOPES.META_BRACE_CURLY_JS,
           ]}
-          scopeMap={scopeMap}
         >
           {'{'}
         </Scope>
         <br />
-        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
-          {'    '}
-        </Scope>
+        <Scope scopes={[SCOPES.SPACE]}>{'    '}</Scope>
         <Scope
           scopes={[
             SCOPES.SOURCE_JS,
@@ -449,7 +304,6 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_FUNCCALL_WARG_JS,
             SCOPES.ENT_NAME_FUNC_JS,
           ]}
-          scopeMap={scopeMap}
         >
           super
         </Scope>
@@ -461,7 +315,6 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_FUNCCALL_WARG_JS,
             SCOPES.META_BRACE_ROUND_JS,
           ]}
-          scopeMap={scopeMap}
         >
           (
         </Scope>
@@ -473,7 +326,6 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_FUNCCALL_WARG_JS,
             SCOPES.VAR_OTHER_RW_JS,
           ]}
-          scopeMap={scopeMap}
         >
           props
         </Scope>
@@ -485,7 +337,6 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_FUNCCALL_WARG_JS,
             SCOPES.META_BRACE_ROUND_JS,
           ]}
-          scopeMap={scopeMap}
         >
           )
         </Scope>
@@ -496,14 +347,11 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_FUNC_METH_JS,
             SCOPES.PUNC_TERM_STMT_JS,
           ]}
-          scopeMap={scopeMap}
         >
           ;
         </Scope>
         <br />
-        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
-          {'    '}
-        </Scope>
+        <Scope scopes={[SCOPES.SPACE]}>{'    '}</Scope>
         <Scope
           scopes={[
             SCOPES.SOURCE_JS,
@@ -511,7 +359,6 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_FUNC_METH_JS,
             SCOPES.VAR_LANG_THIS_JS,
           ]}
-          scopeMap={scopeMap}
         >
           this
         </Scope>
@@ -522,7 +369,6 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_FUNC_METH_JS,
             SCOPES.KEY_OP_ACCESS_JS,
           ]}
-          scopeMap={scopeMap}
         >
           .
         </Scope>
@@ -534,13 +380,10 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_PROP_OBJ_JS,
             SCOPES.VAR_OTHER_PROP_JS,
           ]}
-          scopeMap={scopeMap}
         >
           state
         </Scope>
-        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
-          {' '}
-        </Scope>
+        <Scope scopes={[SCOPES.SPACE]}> </Scope>
         <Scope
           scopes={[
             SCOPES.SOURCE_JS,
@@ -548,14 +391,11 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_FUNC_METH_JS,
             SCOPES.META_BRACE_CURLY_LITOBJ_JS,
           ]}
-          scopeMap={scopeMap}
         >
           {'{'}
         </Scope>
         <br />
-        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
-          {'      '}
-        </Scope>
+        <Scope scopes={[SCOPES.SPACE]}>{'      '}</Scope>
         <Scope
           scopes={[
             SCOPES.SOURCE_JS,
@@ -564,7 +404,6 @@ export default function JSX({ scopeMap }) {
             SCOPES.CONST_OTHER_OBJ_KEY_JS,
             SCOPES.STR_UNQUO_JS,
           ]}
-          scopeMap={scopeMap}
         >
           total
         </Scope>
@@ -575,7 +414,6 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_FUNC_METH_JS,
             SCOPES.PUNC_SEP_KV_JS,
           ]}
-          scopeMap={scopeMap}
         >
           :
         </Scope>
@@ -585,7 +423,6 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_CLS_BODY_JS,
             SCOPES.META_FUNC_METH_JS,
           ]}
-          scopeMap={scopeMap}
         ></Scope>
         <Scope
           scopes={[
@@ -594,7 +431,6 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_FUNC_METH_JS,
             SCOPES.CONST_NUM_JS,
           ]}
-          scopeMap={scopeMap}
         >
           0
         </Scope>
@@ -605,14 +441,11 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_FUNC_METH_JS,
             SCOPES.META_DEL_COMMA_JS,
           ]}
-          scopeMap={scopeMap}
         >
           ,
         </Scope>
         <br />
-        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
-          {'      '}
-        </Scope>
+        <Scope scopes={[SCOPES.SPACE]}>{'      '}</Scope>
         <Scope
           scopes={[
             SCOPES.SOURCE_JS,
@@ -621,7 +454,6 @@ export default function JSX({ scopeMap }) {
             SCOPES.CONST_OTHER_OBJ_KEY_JS,
             SCOPES.STR_UNQUO_JS,
           ]}
-          scopeMap={scopeMap}
         >
           next
         </Scope>
@@ -632,13 +464,10 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_FUNC_METH_JS,
             SCOPES.PUNC_SEP_KV_JS,
           ]}
-          scopeMap={scopeMap}
         >
           :
         </Scope>
-        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
-          {' '}
-        </Scope>
+        <Scope scopes={[SCOPES.SPACE]}> </Scope>
         <Scope
           scopes={[
             SCOPES.SOURCE_JS,
@@ -646,7 +475,6 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_FUNC_METH_JS,
             SCOPES.CONST_LANG_UNDEF_JS,
           ]}
-          scopeMap={scopeMap}
         >
           undefined
         </Scope>
@@ -657,14 +485,11 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_FUNC_METH_JS,
             SCOPES.META_DEL_COMMA_JS,
           ]}
-          scopeMap={scopeMap}
         >
           ,
         </Scope>
         <br />
-        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
-          {'      '}
-        </Scope>
+        <Scope scopes={[SCOPES.SPACE]}>{'      '}</Scope>
         <Scope
           scopes={[
             SCOPES.SOURCE_JS,
@@ -673,7 +498,6 @@ export default function JSX({ scopeMap }) {
             SCOPES.CONST_OTHER_OBJ_KEY_JS,
             SCOPES.STR_UNQUO_JS,
           ]}
-          scopeMap={scopeMap}
         >
           operation
         </Scope>
@@ -684,13 +508,10 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_FUNC_METH_JS,
             SCOPES.PUNC_SEP_KV_JS,
           ]}
-          scopeMap={scopeMap}
         >
           :
         </Scope>
-        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
-          {' '}
-        </Scope>
+        <Scope scopes={[SCOPES.SPACE]}> </Scope>
         <Scope
           scopes={[
             SCOPES.SOURCE_JS,
@@ -698,7 +519,6 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_FUNC_METH_JS,
             SCOPES.CONST_LANG_UNDEF_JS,
           ]}
-          scopeMap={scopeMap}
         >
           null
         </Scope>
@@ -709,14 +529,11 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_FUNC_METH_JS,
             SCOPES.META_DEL_COMMA_JS,
           ]}
-          scopeMap={scopeMap}
         >
           ,
         </Scope>
         <br />
-        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
-          {'    '}
-        </Scope>
+        <Scope scopes={[SCOPES.SPACE]}>{'    '}</Scope>
         <Scope
           scopes={[
             SCOPES.SOURCE_JS,
@@ -724,14 +541,11 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_FUNC_METH_JS,
             SCOPES.META_BRACE_CURLY_LITOBJ_JS,
           ]}
-          scopeMap={scopeMap}
         >
           }
         </Scope>
         <br />
-        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
-          {'  '}
-        </Scope>
+        <Scope scopes={[SCOPES.SPACE]}>{'  '}</Scope>
         <Scope
           scopes={[
             SCOPES.SOURCE_JS,
@@ -739,14 +553,11 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_FUNC_METH_JS,
             SCOPES.META_BRACE_CURLY_JS,
           ]}
-          scopeMap={scopeMap}
         >
           }
         </Scope>
         <br /> <br />
-        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
-          {'  '}
-        </Scope>
+        <Scope scopes={[SCOPES.SPACE]}>{'  '}</Scope>
         <Scope
           scopes={[
             SCOPES.SOURCE_JS,
@@ -754,13 +565,10 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_FUNC_ARROW_JS,
             SCOPES.ENT_NAME_FUNC_JS,
           ]}
-          scopeMap={scopeMap}
         >
           handleClick
         </Scope>
-        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
-          {' '}
-        </Scope>
+        <Scope scopes={[SCOPES.SPACE]}> </Scope>
         <Scope
           scopes={[
             SCOPES.SOURCE_JS,
@@ -768,13 +576,10 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_FUNC_ARROW_JS,
             SCOPES.KEY_OP_ASSIGN_JS,
           ]}
-          scopeMap={scopeMap}
         >
           =
         </Scope>
-        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
-          {' '}
-        </Scope>
+        <Scope scopes={[SCOPES.SPACE]}> </Scope>
         <Scope
           scopes={[
             SCOPES.SOURCE_JS,
@@ -783,13 +588,10 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_FUNC_PARAM_JS,
             SCOPES.VAR_OTHER_RW_JS,
           ]}
-          scopeMap={scopeMap}
         >
           buttonName
         </Scope>
-        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
-          {' '}
-        </Scope>
+        <Scope scopes={[SCOPES.SPACE]}> </Scope>
         <Scope
           scopes={[
             SCOPES.SOURCE_JS,
@@ -797,34 +599,27 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_FUNC_ARROW_JS,
             SCOPES.STRG_TYPE_FUNC_ARROW_JS,
           ]}
-          scopeMap={scopeMap}
         >
           =>
         </Scope>
-        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
-          {' '}
-        </Scope>
+        <Scope scopes={[SCOPES.SPACE]}> </Scope>
         <Scope
           scopes={[
             SCOPES.SOURCE_JS,
             SCOPES.META_CLS_BODY_JS,
             SCOPES.META_BRACE_CURLY_JS,
           ]}
-          scopeMap={scopeMap}
         >
           {'{'}
         </Scope>
         <br />
-        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
-          {'    '}
-        </Scope>
+        <Scope scopes={[SCOPES.SPACE]}>{'    '}</Scope>
         <Scope
           scopes={[
             SCOPES.SOURCE_JS,
             SCOPES.META_CLS_BODY_JS,
             SCOPES.VAR_LANG_THIS_JS,
           ]}
-          scopeMap={scopeMap}
         >
           this
         </Scope>
@@ -834,7 +629,6 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_CLS_BODY_JS,
             SCOPES.KEY_OP_ACCESS_JS,
           ]}
-          scopeMap={scopeMap}
         >
           .
         </Scope>
@@ -845,7 +639,6 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_METHCALL_WARG_JS,
             SCOPES.ENT_NAME_FUNC_JS,
           ]}
-          scopeMap={scopeMap}
         >
           setState
         </Scope>
@@ -856,7 +649,6 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_METHCALL_WARG_JS,
             SCOPES.META_BRACE_ROUND_JS,
           ]}
-          scopeMap={scopeMap}
         >
           (
         </Scope>
@@ -868,7 +660,6 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_FUNCCALL_WARG_JS,
             SCOPES.ENT_NAME_FUNC_JS,
           ]}
-          scopeMap={scopeMap}
         >
           calculate
         </Scope>
@@ -880,7 +671,6 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_FUNCCALL_WARG_JS,
             SCOPES.META_BRACE_ROUND_JS,
           ]}
-          scopeMap={scopeMap}
         >
           (
         </Scope>
@@ -892,7 +682,6 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_FUNCCALL_WARG_JS,
             SCOPES.VAR_LANG_THIS_JS,
           ]}
-          scopeMap={scopeMap}
         >
           this
         </Scope>
@@ -904,7 +693,6 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_FUNCCALL_WARG_JS,
             SCOPES.KEY_OP_ACCESS_JS,
           ]}
-          scopeMap={scopeMap}
         >
           .
         </Scope>
@@ -917,7 +705,6 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_PROP_OBJ_JS,
             SCOPES.VAR_OTHER_PROP_JS,
           ]}
-          scopeMap={scopeMap}
         >
           state
         </Scope>
@@ -929,13 +716,10 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_FUNCCALL_WARG_JS,
             SCOPES.META_DEL_COMMA_JS,
           ]}
-          scopeMap={scopeMap}
         >
           ,
         </Scope>
-        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
-          {' '}
-        </Scope>
+        <Scope scopes={[SCOPES.SPACE]}> </Scope>
         <Scope
           scopes={[
             SCOPES.SOURCE_JS,
@@ -944,7 +728,6 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_FUNCCALL_WARG_JS,
             SCOPES.VAR_OTHER_RW_JS,
           ]}
-          scopeMap={scopeMap}
         >
           buttonName
         </Scope>
@@ -956,7 +739,6 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_FUNCCALL_WARG_JS,
             SCOPES.META_BRACE_ROUND_JS,
           ]}
-          scopeMap={scopeMap}
         >
           )
         </Scope>
@@ -968,7 +750,6 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_FUNCCALL_WARG_JS,
             SCOPES.META_BRACE_ROUND_JS,
           ]}
-          scopeMap={scopeMap}
         >
           )
         </Scope>
@@ -979,28 +760,22 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_FUNC_METH_JS,
             SCOPES.PUNC_TERM_STMT_JS,
           ]}
-          scopeMap={scopeMap}
         >
           ;
         </Scope>
         <br />
-        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
-          {'  '}
-        </Scope>
+        <Scope scopes={[SCOPES.SPACE]}>{'  '}</Scope>
         <Scope
           scopes={[
             SCOPES.SOURCE_JS,
             SCOPES.META_CLS_BODY_JS,
             SCOPES.META_BRACE_CURLY_JS,
           ]}
-          scopeMap={scopeMap}
         >
           }
         </Scope>
         <br /> <br />
-        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
-          {'  '}
-        </Scope>
+        <Scope scopes={[SCOPES.SPACE]}>{'  '}</Scope>
         <Scope
           scopes={[
             SCOPES.SOURCE_JS,
@@ -1008,7 +783,6 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_FUNC_METH_JS,
             SCOPES.ENT_NAME_FUNC_METH_JS,
           ]}
-          scopeMap={scopeMap}
         >
           render
         </Scope>
@@ -1020,7 +794,6 @@ export default function JSX({ scopeMap }) {
             SCOPES.PUNC_DEF_PARAM_BEGIN_JS,
             SCOPES.META_BRACE_ROUND_JS,
           ]}
-          scopeMap={scopeMap}
         >
           (
         </Scope>
@@ -1032,13 +805,10 @@ export default function JSX({ scopeMap }) {
             SCOPES.PUNC_DEF_PARAM_END_JS,
             SCOPES.META_BRACE_ROUND_JS,
           ]}
-          scopeMap={scopeMap}
         >
           )
         </Scope>
-        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
-          {' '}
-        </Scope>
+        <Scope scopes={[SCOPES.SPACE]}> </Scope>
         <Scope
           scopes={[
             SCOPES.SOURCE_JS,
@@ -1046,14 +816,11 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_FUNC_METH_JS,
             SCOPES.META_BRACE_CURLY_JS,
           ]}
-          scopeMap={scopeMap}
         >
           {'{'}
         </Scope>
         <br />
-        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
-          {'    '}
-        </Scope>
+        <Scope scopes={[SCOPES.SPACE]}>{'    '}</Scope>
         <Scope
           scopes={[
             SCOPES.SOURCE_JS,
@@ -1061,13 +828,10 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_FUNC_METH_JS,
             SCOPES.KEY_CTRL_FLOW_JS,
           ]}
-          scopeMap={scopeMap}
         >
           return
         </Scope>
-        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
-          {' '}
-        </Scope>
+        <Scope scopes={[SCOPES.SPACE]}> </Scope>
         <Scope
           scopes={[
             SCOPES.SOURCE_JS,
@@ -1075,14 +839,11 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_FUNC_METH_JS,
             SCOPES.META_BRACE_ROUND_JS,
           ]}
-          scopeMap={scopeMap}
         >
           (
         </Scope>
         <br />
-        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
-          {'      '}
-        </Scope>
+        <Scope scopes={[SCOPES.SPACE]}>{'      '}</Scope>
         <Scope
           scopes={[
             SCOPES.SOURCE_JS,
@@ -1091,7 +852,6 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_TAG_JSX,
             SCOPES.PUNC_DEF_TAG_JSX,
           ]}
-          scopeMap={scopeMap}
         >
           {'<'}
         </Scope>
@@ -1103,13 +863,10 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_TAG_JSX,
             SCOPES.ENT_NAME_TAG_OPEN_JSX,
           ]}
-          scopeMap={scopeMap}
         >
           div
         </Scope>
-        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
-          {' '}
-        </Scope>
+        <Scope scopes={[SCOPES.SPACE]}> </Scope>
         <Scope
           scopes={[
             SCOPES.SOURCE_JS,
@@ -1119,7 +876,6 @@ export default function JSX({ scopeMap }) {
             SCOPES.JSXATTR,
             SCOPES.ENT_OTHER_ATTRNAME_JSX,
           ]}
-          scopeMap={scopeMap}
         >
           className
         </Scope>
@@ -1132,7 +888,6 @@ export default function JSX({ scopeMap }) {
             SCOPES.JSXATTR,
             SCOPES.KEY_OP_ASSIGN_JS,
           ]}
-          scopeMap={scopeMap}
         >
           =
         </Scope>
@@ -1146,7 +901,6 @@ export default function JSX({ scopeMap }) {
             SCOPES.STR_QUO_DOUBLE_JS,
             SCOPES.PUNC_DEF_STR_BEGIN_JS,
           ]}
-          scopeMap={scopeMap}
         >
           "
         </Scope>
@@ -1159,7 +913,6 @@ export default function JSX({ scopeMap }) {
             SCOPES.JSXATTR,
             SCOPES.STR_QUO_DOUBLE_JS,
           ]}
-          scopeMap={scopeMap}
         >
           component-app
         </Scope>
@@ -1173,7 +926,6 @@ export default function JSX({ scopeMap }) {
             SCOPES.STR_QUO_DOUBLE_JS,
             SCOPES.PUNC_DEF_STR_END_JS,
           ]}
-          scopeMap={scopeMap}
         >
           "
         </Scope>
@@ -1187,14 +939,11 @@ export default function JSX({ scopeMap }) {
             SCOPES.PUNC_DEF_TAG_JSX,
             SCOPES.JSXSTARTTAGEND,
           ]}
-          scopeMap={scopeMap}
         >
           {'>'}
         </Scope>
         <br />
-        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
-          {'        '}
-        </Scope>
+        <Scope scopes={[SCOPES.SPACE]}>{'        '}</Scope>
         <Scope
           scopes={[
             SCOPES.SOURCE_JS,
@@ -1204,14 +953,11 @@ export default function JSX({ scopeMap }) {
             SCOPES.JSXATTR,
             SCOPES.JSXNESTED,
           ]}
-          scopeMap={scopeMap}
         >
           Tacos
         </Scope>
         <br />
-        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
-          {'        '}
-        </Scope>
+        <Scope scopes={[SCOPES.SPACE]}>{'        '}</Scope>
         <Scope
           scopes={[
             SCOPES.SOURCE_JS,
@@ -1223,7 +969,6 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_TAG_JSX,
             SCOPES.PUNC_DEF_TAG_JSX,
           ]}
-          scopeMap={scopeMap}
         >
           {'<'}
         </Scope>
@@ -1239,13 +984,10 @@ export default function JSX({ scopeMap }) {
             SCOPES.ENT_NAME_TAG_OPEN_JSX,
             SCOPES.SUPP_CLS_COMP_OPEN_JSX,
           ]}
-          scopeMap={scopeMap}
         >
           Display
         </Scope>
-        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
-          {' '}
-        </Scope>
+        <Scope scopes={[SCOPES.SPACE]}> </Scope>
         <Scope
           scopes={[
             SCOPES.SOURCE_JS,
@@ -1258,7 +1000,6 @@ export default function JSX({ scopeMap }) {
             SCOPES.JSXATTR,
             SCOPES.ENT_OTHER_ATTRNAME_JSX,
           ]}
-          scopeMap={scopeMap}
         >
           value
         </Scope>
@@ -1274,7 +1015,6 @@ export default function JSX({ scopeMap }) {
             SCOPES.JSXATTR,
             SCOPES.KEY_OP_ASSIGN_JS,
           ]}
-          scopeMap={scopeMap}
         >
           =
         </Scope>
@@ -1291,7 +1031,6 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_EMB_EXPR_JS,
             SCOPES.PUNC_SEC_EMB_BEGIN_JSX,
           ]}
-          scopeMap={scopeMap}
         >
           {'{'}
         </Scope>
@@ -1309,7 +1048,6 @@ export default function JSX({ scopeMap }) {
             SCOPES.SOURCE_JS,
             SCOPES.VAR_LANG_THIS_JS,
           ]}
-          scopeMap={scopeMap}
         >
           this
         </Scope>
@@ -1327,7 +1065,6 @@ export default function JSX({ scopeMap }) {
             SCOPES.SOURCE_JS,
             SCOPES.KEY_OP_ACCESS_JS,
           ]}
-          scopeMap={scopeMap}
         >
           .
         </Scope>
@@ -1346,7 +1083,6 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_PROP_OBJ_JS,
             SCOPES.VAR_OTHER_PROP_JS,
           ]}
-          scopeMap={scopeMap}
         >
           state
         </Scope>
@@ -1364,7 +1100,6 @@ export default function JSX({ scopeMap }) {
             SCOPES.SOURCE_JS,
             SCOPES.KEY_OP_ACCESS_JS,
           ]}
-          scopeMap={scopeMap}
         >
           .
         </Scope>
@@ -1383,13 +1118,10 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_PROP_OBJ_JS,
             SCOPES.VAR_OTHER_PROP_JS,
           ]}
-          scopeMap={scopeMap}
         >
           next
         </Scope>
-        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
-          {' '}
-        </Scope>
+        <Scope scopes={[SCOPES.SPACE]}> </Scope>
         <Scope
           scopes={[
             SCOPES.SOURCE_JS,
@@ -1404,13 +1136,10 @@ export default function JSX({ scopeMap }) {
             SCOPES.SOURCE_JS,
             SCOPES.KEY_OP_LOGIC_JS,
           ]}
-          scopeMap={scopeMap}
         >
           ||
         </Scope>
-        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
-          {' '}
-        </Scope>
+        <Scope scopes={[SCOPES.SPACE]}> </Scope>
         <Scope
           scopes={[
             SCOPES.SOURCE_JS,
@@ -1425,7 +1154,6 @@ export default function JSX({ scopeMap }) {
             SCOPES.SOURCE_JS,
             SCOPES.VAR_LANG_THIS_JS,
           ]}
-          scopeMap={scopeMap}
         >
           this
         </Scope>
@@ -1443,7 +1171,6 @@ export default function JSX({ scopeMap }) {
             SCOPES.SOURCE_JS,
             SCOPES.KEY_OP_ACCESS_JS,
           ]}
-          scopeMap={scopeMap}
         >
           .
         </Scope>
@@ -1462,7 +1189,6 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_PROP_OBJ_JS,
             SCOPES.VAR_OTHER_PROP_JS,
           ]}
-          scopeMap={scopeMap}
         >
           state
         </Scope>
@@ -1480,7 +1206,6 @@ export default function JSX({ scopeMap }) {
             SCOPES.SOURCE_JS,
             SCOPES.KEY_OP_ACCESS_JS,
           ]}
-          scopeMap={scopeMap}
         >
           .
         </Scope>
@@ -1499,13 +1224,10 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_PROP_OBJ_JS,
             SCOPES.VAR_OTHER_PROP_JS,
           ]}
-          scopeMap={scopeMap}
         >
           total
         </Scope>
-        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
-          {' '}
-        </Scope>
+        <Scope scopes={[SCOPES.SPACE]}> </Scope>
         <Scope
           scopes={[
             SCOPES.SOURCE_JS,
@@ -1520,13 +1242,10 @@ export default function JSX({ scopeMap }) {
             SCOPES.SOURCE_JS,
             SCOPES.KEY_OP_LOGIC_JS,
           ]}
-          scopeMap={scopeMap}
         >
           ||
         </Scope>
-        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
-          {' '}
-        </Scope>
+        <Scope scopes={[SCOPES.SPACE]}> </Scope>
         <Scope
           scopes={[
             SCOPES.SOURCE_JS,
@@ -1542,7 +1261,6 @@ export default function JSX({ scopeMap }) {
             SCOPES.STR_QUO_SINGLE_JS,
             SCOPES.PUNC_DEF_STR_BEGIN_JS,
           ]}
-          scopeMap={scopeMap}
         >
           '
         </Scope>
@@ -1560,7 +1278,6 @@ export default function JSX({ scopeMap }) {
             SCOPES.SOURCE_JS,
             SCOPES.STR_QUO_SINGLE_JS,
           ]}
-          scopeMap={scopeMap}
         >
           0
         </Scope>
@@ -1579,7 +1296,6 @@ export default function JSX({ scopeMap }) {
             SCOPES.STR_QUO_SINGLE_JS,
             SCOPES.PUNC_DEF_STR_END_JS,
           ]}
-          scopeMap={scopeMap}
         >
           '
         </Scope>
@@ -1596,13 +1312,10 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_EMB_EXPR_JS,
             SCOPES.PUNC_SEC_EMB_END_JSX,
           ]}
-          scopeMap={scopeMap}
         >
           }
         </Scope>
-        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
-          {' '}
-        </Scope>
+        <Scope scopes={[SCOPES.SPACE]}> </Scope>
         <Scope
           scopes={[
             SCOPES.SOURCE_JS,
@@ -1614,14 +1327,11 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_TAG_JSX,
             SCOPES.PUNC_DEF_TAG_JS,
           ]}
-          scopeMap={scopeMap}
         >
           {'/>'}
         </Scope>
         <br />
-        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
-          {'      '}
-        </Scope>
+        <Scope scopes={[SCOPES.SPACE]}>{'      '}</Scope>
         <Scope
           scopes={[
             SCOPES.SOURCE_JS,
@@ -1632,7 +1342,6 @@ export default function JSX({ scopeMap }) {
             SCOPES.PUNC_DEF_TAG_JSX,
             SCOPES.JSXENDTAGSTART,
           ]}
-          scopeMap={scopeMap}
         >
           {'</'}
         </Scope>
@@ -1644,7 +1353,6 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_TAG_JSX,
             SCOPES.ENT_NAME_TAG_CLOSE_JSX,
           ]}
-          scopeMap={scopeMap}
         >
           div
         </Scope>
@@ -1656,14 +1364,11 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_TAG_JSX,
             SCOPES.PUNC_DEF_TAG_JSX,
           ]}
-          scopeMap={scopeMap}
         >
           {'>'}
         </Scope>
         <br />
-        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
-          {'    '}
-        </Scope>
+        <Scope scopes={[SCOPES.SPACE]}>{'    '}</Scope>
         <Scope
           scopes={[
             SCOPES.SOURCE_JS,
@@ -1671,7 +1376,6 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_FUNC_METH_JS,
             SCOPES.META_BRACE_ROUND_JS,
           ]}
-          scopeMap={scopeMap}
         >
           )
         </Scope>
@@ -1682,14 +1386,11 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_FUNC_METH_JS,
             SCOPES.PUNC_TERM_STMT_JS,
           ]}
-          scopeMap={scopeMap}
         >
           ;
         </Scope>
         <br />
-        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
-          {'  '}
-        </Scope>
+        <Scope scopes={[SCOPES.SPACE]}>{'  '}</Scope>
         <Scope
           scopes={[
             SCOPES.SOURCE_JS,
@@ -1697,42 +1398,21 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_FUNC_METH_JS,
             SCOPES.META_BRACE_CURLY_JS,
           ]}
-          scopeMap={scopeMap}
         >
           }
         </Scope>
         <br />
-        <Scope
-          scopes={[SCOPES.SOURCE_JS, SCOPES.PUNC_SEC_CLS_END_JS]}
-          scopeMap={scopeMap}
-        >
-          }
-        </Scope>
+        <Scope scopes={[SCOPES.SOURCE_JS, SCOPES.PUNC_SEC_CLS_END_JS]}>}</Scope>
         <br /> <br />
-        <Scope
-          scopes={[SCOPES.SOURCE_JS, SCOPES.KEY_CTRL_MOD_JS]}
-          scopeMap={scopeMap}
-        >
+        <Scope scopes={[SCOPES.SOURCE_JS, SCOPES.KEY_CTRL_MOD_JS]}>
           export
         </Scope>
-        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
-          {' '}
-        </Scope>
-        <Scope
-          scopes={[SCOPES.SOURCE_JS, SCOPES.KEY_CTRL_MOD_JS]}
-          scopeMap={scopeMap}
-        >
+        <Scope scopes={[SCOPES.SPACE]}> </Scope>
+        <Scope scopes={[SCOPES.SOURCE_JS, SCOPES.KEY_CTRL_MOD_JS]}>
           default
         </Scope>
-        <Scope scopes={[SCOPES.SPACE]} scopeMap={scopeMap}>
-          {' '}
-        </Scope>
-        <Scope
-          scopes={[SCOPES.SOURCE_JS, SCOPES.VAR_OTHER_RW_JS]}
-          scopeMap={scopeMap}
-        >
-          App
-        </Scope>
+        <Scope scopes={[SCOPES.SPACE]}> </Scope>
+        <Scope scopes={[SCOPES.SOURCE_JS, SCOPES.VAR_OTHER_RW_JS]}>App</Scope>
         <Scope
           scopes={[
             SCOPES.SOURCE_JS,
@@ -1740,7 +1420,6 @@ export default function JSX({ scopeMap }) {
             SCOPES.META_FUNC_METH_JS,
             SCOPES.PUNC_TERM_STMT_JS,
           ]}
-          scopeMap={scopeMap}
         >
           ;
         </Scope>

@@ -1,6 +1,8 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useContext } from 'react';
+import { AppContext } from '../../context';
 
-export default function Scope({ scopes, scopeMap, children }) {
+export default function Scope({ scopes, children }) {
+  const { scopeMap } = useContext(AppContext);
   const token = useMemo(() => {
     for (let s = scopes.length - 1; s >= 0; s--) {
       const sParts = scopes[s].split('.');

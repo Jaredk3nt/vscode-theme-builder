@@ -11,23 +11,6 @@ function Preview({ language = 'jsx', theme }) {
   // Pick correct language example
   const lang = LANG_MAP[language];
   const LangComponent = lang.preview;
-  // Reverse tokens to map of scope: token-name for fast lookup
-  // TODO: move scope map up a level and to context since it is used by so many components
-  const scopeMap = useMemo(() => {
-    const map = {};
-    for (let token of theme.tokens) {
-      if (token.scopes) {
-        if (Array.isArray(token.scopes)) {
-          for (let scope of token.scopes) {
-            map[scope] = { id: token.id, name: token.name };
-          }
-        } else {
-          map[token.scopes] = { id: token.id, name: token.name };
-        }
-      }
-    }
-    return map;
-  }, [theme]);
   // Generate classes for each token
   const themeStyles = useMemo(() => {
     const styles = `${theme.tokens
@@ -49,7 +32,7 @@ function Preview({ language = 'jsx', theme }) {
 
   return (
     <div css={css(themeStyles)}>
-      <LangComponent scopeMap={scopeMap} />
+      <LangComponent />
     </div>
   );
 }
