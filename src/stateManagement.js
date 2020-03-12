@@ -40,7 +40,7 @@ export function reducer(state, action) {
         ...state,
         theme: {
           ...state.theme,
-          name: action.theme.name + ' Copy',
+          name: action.theme.name.toLowerCase(),
           styles: action.theme.colors,
           tokens: action.theme.tokenColors.map(tk => ({
             id: generate(),

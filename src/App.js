@@ -1,15 +1,14 @@
 import React, { useState, useReducer, useEffect, useMemo } from 'react';
 // Components
 import Preview from './components/Preview';
+import Builder from './components/Builder';
 // Utils
-import { THEME_MAP } from './themes';
 import { getTheme } from './utils/themeUtils';
 import { INITIAL_STATE, types, reducer } from './stateManagement';
 // Context
 import { AppContextProvider } from './context';
 
 function App() {
-  const [base, setBase] = useState('nightowl');
   const [state, dispatch] = useReducer(reducer, INITIAL_STATE);
   // Reverse tokens to map of scope: token-name for fast lookup
   const scopeMap = useMemo(() => {
@@ -28,20 +27,24 @@ function App() {
     }
     return map;
   }, [state.theme]);
-  // Update the theme when base is selected
-  useEffect(() => {
-    dispatch({ type: types.USE_THEME_FILE, theme: getTheme(base) });
-  }, [base]);
+
+  // Temporary first time set up
+  useEffect(
+    () =>
+      dispatch({ type: types.USE_THEME_FILE, theme: getTheme('laserwave') }),
+    []
+  );
 
   return (
     <>
       <AppContextProvider value={{ scopeMap }}>
-        <select value={base} onChange={e => setBase(e.target.value)}>
-          {Object.entries(THEME_MAP).map(([key, th]) => (
-            <option value={key}>{th.displayName}</option>
-          ))}
-        </select>
         <Preview language={state.language} theme={state.theme} />
+        <Builder
+          store={state}
+          onThemeChange={theme =>
+            dispatch({ type: types.USE_THEME_FILE, theme })
+          }
+        />
       </AppContextProvider>
     </>
   );
