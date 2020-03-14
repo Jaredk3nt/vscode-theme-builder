@@ -1,3 +1,4 @@
+// TODO: ADD ALL SCOPES
 const SCOPES = {
   SPACE: 'space',
   // Editor
@@ -30,14 +31,11 @@ const SCOPES = {
   PUNC_SEC_CLS_BEGIN_JS: 'punctuation.section.class.begin.js',
   PUNC_DEF_TAG_JSX: 'puncutation.definition.tag.jsx',
   PUNC_DEF_PARAM_END_JS: 'puncutation.definition.parameters.end.js',
-  PUNC_DEF_STR_BEGIN_JS: 'punctuation.definition.string.begin.js',
   PUNC_DEF_STR_END_JS: 'punctuation.definition.string.end.js',
   PUNC_SEP_KV_JS: 'punctuation.separator.key-value.js',
   PUNC_DEF_PARAM_BEGIN_JS: 'punctuation.definition.parameters.begin.js',
   PUNC_DEF_TAG_JS: 'punctuation.definition.tag.js',
   PUNC_SEC_CLS_END_JS: 'punctuation.section.class.end.js',
-  PUNC_DEF_TAG_JSX: 'punctuation.definition.tag.jsx',
-  PUNC_DEF_STR_BEGIN_JS: 'punctuation.definition.string.begin.jsx',
   PUNC_SEC_EMB_BEGIN_JSX: 'punctuation.section.embedded.begin.jsx',
   PUNC_SEC_EMB_END_JSX: 'punctuation.section.embedded.end.jsx',
   // Meta

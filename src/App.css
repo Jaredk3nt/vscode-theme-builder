@@ -1,4 +1,4 @@
-code {
-  display: block;
-  overflow-x: auto;
+body {
+  margin: 0;
+  padding: 0;
 }

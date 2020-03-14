@@ -1,23 +1,80 @@
-import React from 'react';
+import React from "react";
+import styled from "@emotion/styled";
+// Components
+import TokenDrop from "./TokenDrop";
+import ScopeDrag from "./ScopeDrag";
+import ScopeListDrop from "./ScopeListDrop";
 // Utils
-import { getTheme } from '../utils/themeUtils';
+import { getTheme } from "../utils/themeUtils";
 // Variables
-import { THEME_MAP } from '../themes';
+import { THEME_MAP } from "../themes";
+import { types } from "../stateManagement";
 
-export default function Builder({ onThemeChange, store }) {
-  // TODO: add all existing scopes to list
-  // TODO: add current theme tokens to list with scopes, remove from full list ones in theme
-  // TODO: make all of those scopes drag and droppable into one another, this should update the theme
+export default function Builder({ onThemeChange, store, dispatch }) {
   return (
-    <>
-      <select
-        value={store.theme.name}
-        onChange={e => onThemeChange(getTheme(e.target.value))}
-      >
-        {Object.entries(THEME_MAP).map(([key, th]) => (
-          <option value={key}>{th.displayName}</option>
-        ))}
-      </select>
-    </>
+    <BuilderLayout>
+      <div>
+        <select
+          value={store.theme.name}
+          onChange={e => onThemeChange(getTheme(e.target.value))}
+        >
+          {Object.entries(THEME_MAP).map(([key, th]) => (
+            <option value={key}>{th.displayName}</option>
+          ))}
+        </select>
+      </div>
+      <Layout>
+        <ScrollingList>
+          {store.theme.tokens.map((tk, i) => (
+            <li>
+              <TokenDrop
+                onDrop={item =>
+                  dispatch({ type: types.PLACE_SCOPE, item, index: i })
+                }
+              >
+                <p>{tk.name}</p>
+                <ul>
+                  {tk.scopes.map(scope => (
+                    <li>
+                      <ScopeDrag scope={scope} tokenIndex={i} />
+                    </li>
+                  ))}
+                </ul>
+              </TokenDrop>
+            </li>
+          ))}
+        </ScrollingList>
+        <ScrollingList>
+          <ScopeListDrop
+            onDrop={item => dispatch({ type: types.DISCARD_SCOPE, item })}
+          >
+            {store.scopes.map(scope => (
+              <li>
+                <ScopeDrag scope={scope} />
+              </li>
+            ))}
+          </ScopeListDrop>
+        </ScrollingList>
+      </Layout>
+    </BuilderLayout>
   );
 }
+
+const BuilderLayout = styled("div")`
+  display: grid;
+  grid-template-rows: 50px 1fr;
+  height: 100vh;
+`;
+
+const Layout = styled("div")`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+`;
+
+const ScrollingList = styled("ul")`
+  height: 100%;
+  max-height: calc(100vh - 50px);
+  overflow: scroll;
+  margin: 0;
+  padding: 0px;
+`;
