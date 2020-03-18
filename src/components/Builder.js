@@ -1,14 +1,14 @@
-import React from "react";
-import styled from "@emotion/styled";
+import React from 'react';
+import styled from '@emotion/styled';
 // Components
-import TokenDrop from "./TokenDrop";
-import ScopeDrag from "./ScopeDrag";
-import ScopeListDrop from "./ScopeListDrop";
+import TokenDrop from './TokenDrop';
+import ScopeDrag from './ScopeDrag';
+import ScopeListDrop from './ScopeListDrop';
 // Utils
-import { getTheme } from "../utils/themeUtils";
+import { getTheme } from '../utils/themeUtils';
 // Variables
-import { THEME_MAP } from "../themes";
-import { types } from "../stateManagement";
+import { THEME_MAP } from '../themes';
+import { types } from '../stateManagement';
 
 export default function Builder({ onThemeChange, store, dispatch }) {
   return (
@@ -33,6 +33,23 @@ export default function Builder({ onThemeChange, store, dispatch }) {
                 }
               >
                 <p>{tk.name}</p>
+                {Object.entries(tk.styles).map(([style, value]) => (
+                  <>
+                    <label>{style}</label>
+                    <input
+                      value={value}
+                      onChange={e =>
+                        dispatch({
+                          type: types.UPDATE_TOKEN_STYLE,
+                          style,
+                          index: i,
+                          value: e.target.value,
+                        })
+                      }
+                    />
+                  </>
+                ))}
+                {console.log(tk)}
                 <ul>
                   {tk.scopes.map(scope => (
                     <li>
@@ -60,18 +77,18 @@ export default function Builder({ onThemeChange, store, dispatch }) {
   );
 }
 
-const BuilderLayout = styled("div")`
+const BuilderLayout = styled('div')`
   display: grid;
   grid-template-rows: 50px 1fr;
   height: 100vh;
 `;
 
-const Layout = styled("div")`
+const Layout = styled('div')`
   display: grid;
   grid-template-columns: 1fr 1fr;
 `;
 
-const ScrollingList = styled("ul")`
+const ScrollingList = styled('ul')`
   height: 100%;
   max-height: calc(100vh - 50px);
   overflow: scroll;
