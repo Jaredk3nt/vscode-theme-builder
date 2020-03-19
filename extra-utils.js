@@ -1,0 +1,3 @@
+function scrapeThemeColors() {
+  return Array.from(document.getElementById('main-content').childNodes.values()).reduce((acc,node) =>{function getCodeBlocks(node){const children = node.childNodes;if(children){const result = [];children.forEach(child =>{if(child.tagName && child.tagName.toLowerCase() === 'code'){result.push(child.textContent)}const inner = getCodeBlocks(child);if(inner) result.push(...inner)});return result}}return [...acc,...getCodeBlocks(node)]},[]).filter(item =>/^[a-zA-z.]+$/.test(item));
+}

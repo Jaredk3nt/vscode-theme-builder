@@ -32,13 +32,6 @@ function App() {
     return map;
   }, [state.theme]);
 
-  // Temporary first time set up
-  useEffect(
-    () =>
-      dispatch({ type: types.USE_THEME_FILE, theme: getTheme("laserwave") }),
-    []
-  );
-
   return (
     <>
       <AppContextProvider value={{ scopeMap }}>

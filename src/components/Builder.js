@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from '@emotion/styled';
 // Components
 import TokenDrop from './TokenDrop';
@@ -11,6 +11,14 @@ import { THEME_MAP } from '../themes';
 import { types } from '../stateManagement';
 
 export default function Builder({ onThemeChange, store, dispatch }) {
+  const [tokenAdd, setTokenAdd] = useState(false);
+  const [addTokenName, setAddTokenName] = useState('');
+
+  function closeAddToken() {
+    setTokenAdd(false);
+    setAddTokenName('');
+  }
+
   return (
     <BuilderLayout>
       <div>
@@ -22,9 +30,34 @@ export default function Builder({ onThemeChange, store, dispatch }) {
             <option value={key}>{th.displayName}</option>
           ))}
         </select>
+        <button
+          onClick={() => setTokenAdd(true)}
+          type="button"
+          disabled={tokenAdd}
+        >
+          + Token
+        </button>
       </div>
       <Layout>
         <ScrollingList>
+          {tokenAdd && (
+            <div>
+              <input
+                value={addTokenName}
+                onChange={e => setAddTokenName(e.target.value)}
+              />
+              <button type="button" onClick={() => closeAddToken()}>
+                Cancel
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  dispatch({ type: types.ADD_TOKEN, name: addTokenName });
+                  closeAddToken();
+                }}
+              >+ Token</button>
+            </div>
+          )}
           {store.theme.tokens.map((tk, i) => (
             <li>
               <TokenDrop
@@ -79,7 +112,7 @@ export default function Builder({ onThemeChange, store, dispatch }) {
 
 const BuilderLayout = styled('div')`
   display: grid;
-  grid-template-rows: 50px 1fr;
+  grid-template-rows: 30% 1fr;
   height: 100vh;
 `;
 

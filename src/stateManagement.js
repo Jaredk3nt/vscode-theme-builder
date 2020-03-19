@@ -1,10 +1,13 @@
 import { generate } from 'shortid';
 import { pureKeyRemove } from './utils/pureFunctions';
+// Constants
 import { SCOPES } from './scopes';
+import { ROOT_STYLES } from './styles';
 
 export const INITIAL_STATE = {
   language: 'jsx',
-  scopes: Object.values(SCOPES),
+  scopes: Object.values(SCOPES).sort(),
+  rootStyles: ROOT_STYLES,
   theme: {
     name: '',
     styles: {},
@@ -33,6 +36,10 @@ export const types = {
 // TODO: move into utils file
 function purePush(arr, item) {
   return [...arr, item];
+}
+
+function pureUnshift(arr, item) {
+  return [item, ...arr];
 }
 
 function pureRemove(arr, i) {
@@ -154,8 +161,19 @@ export function reducer(state, action) {
           styles: pureKeyRemove(state.theme.styles, action.style),
         },
       };
+    case types.ADD_TOKEN:
+      return {
+        ...state,
+        theme: {
+          ...state.theme,
+          tokens: pureUnshift(state.theme.tokens, {
+            name: action.name,
+            scopes: [],
+            styles: {},
+          }),
+        },
+      };
     case types.UPDATE_TOKEN_STYLE:
-      console.log(action);
       return {
         ...state,
         theme: {
@@ -164,9 +182,9 @@ export function reducer(state, action) {
             ...state.theme.tokens[action.index],
             styles: {
               ...state.theme.tokens[action.index].styles,
-              [action.style]: action.value
-            }
-          })
+              [action.style]: action.value,
+            },
+          }),
         },
       };
     case types.PLACE_SCOPE:
